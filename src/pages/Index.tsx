@@ -5,7 +5,7 @@ import { PerformanceChart } from "@/components/PerformanceChart";
 import { PortfolioBreakdown } from "@/components/PortfolioBreakdown";
 import { AboutSection } from "@/components/AboutSection";
 import { Divisions } from "@/components/Divisions";
-import { MacroResearch } from "@/components/MacroResearch";
+import { MacroDashboard } from "@/components/MacroDashboard";
 import { EducationSection } from "@/components/EducationSection";
 import { Partners } from "@/components/Partners";
 import { JoinSection } from "@/components/JoinSection";
@@ -27,7 +27,7 @@ const Index = () => {
           <Divisions />
         </div>
         <div id="research">
-          <MacroResearch />
+          <MacroDashboard />
         </div>
         <div id="performance" className="container mx-auto px-4 py-16">
           <PerformanceChart />
