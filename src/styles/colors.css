@@ -1,0 +1,17 @@
+/* src/styles/colors.css */
+:root {
+  /* New color palette */
+  --color-ivory: #FFFCF2;
+  --color-cornflower: #6184D8;
+  --color-delft: #1D3461;
+  --color-oxford: #011936;
+  --color-blush: #FDEDF0;
+
+  /* Semantic tokens */
+  --bg: var(--color-ivory);
+  --surface: var(--color-blush);
+  --primary: var(--color-cornflower);
+  --primary-contrast: #ffffff;
+  --text-dark: var(--color-oxford);
+  --text-light: #ffffff;
+}
