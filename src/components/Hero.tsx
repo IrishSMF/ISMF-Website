@@ -117,9 +117,9 @@ export const Hero = () => {
       >
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-3 gap-8 md:gap-16">
-            <Stat label="Assets Under Management" value={[insert number here]} suffix="M+" />
-            <Stat label="Active Members" value={[insert number here]} />
-            <Stat label="Annual Return" value={[insert number here]} suffix="%" />
+            <Stat label="Assets Under Management" value={1} suffix="M+" />
+            <Stat label="Active Members" value={100} />
+            <Stat label="Annual Return" value={15} suffix="%" />
           </div>
         </div>
       </motion.div>

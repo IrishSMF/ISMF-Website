@@ -22,7 +22,7 @@ export const JoinSection = () => {
                 Join the ISMF Team
               </h2>
               <p className="text-lg text-muted-foreground">
-                Applications for the 2024/2025 academic year are now open
+                Applications for the 2025/2026 academic year are now open
               </p>
             </div>
 
@@ -45,7 +45,8 @@ export const JoinSection = () => {
                   <Card className="p-4 bg-muted/50">
                     <p className="font-semibold mb-1">Any Academic Background</p>
                     <p className="text-sm text-muted-foreground">
-                      You don't need to be a finance major - we welcome passionate learners from all disciplines
+                      You don't need to be a finance major - we welcome passionate learners from all disciplines! We have a role for everyone, including finance students,developers,
+                      marketers, and more.
                     </p>
                   </Card>
                   
@@ -72,7 +73,7 @@ export const JoinSection = () => {
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
               <p className="text-sm text-muted-foreground mt-4">
-                Application deadline: October 15, 2024
+                Application deadline: INSERT DATE HERE
               </p>
             </div>
           </Card>
