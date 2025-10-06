@@ -12,28 +12,34 @@ export const Footer = () => {
             <p className="text-white/80 mb-4">
               Empowering Irish students with hands-on investment experience and financial education.
             </p>
-            <div className="flex gap-3">
-              <Button 
-                size="icon" 
-                variant="ghost" 
-                className="text-white hover:bg-white/10"
+            <div className="mb-4">
+              <h3 className="font-semibold text-white mb-3">Follow Us</h3>
+              <div className="flex gap-4">
+              <a
+                href="https://www.linkedin.com/company/irishsmf/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit ISMF LinkedIn page"
+                className="text-white/80 hover:text-[#0077B5] transition-all duration-300 transform hover:scale-110 hover:bg-white/10 p-2 rounded-lg"
               >
-                <Linkedin className="h-5 w-5" />
-              </Button>
-              <Button 
-                size="icon" 
-                variant="ghost" 
-                className="text-white hover:bg-white/10"
+                <Linkedin className="h-6 w-6" />
+              </a>
+              <a
+                href="mailto:info@ismf.ie"
+                aria-label="Send email to ISMF"
+                className="text-white/80 hover:text-cornflower transition-all duration-300 transform hover:scale-110 hover:bg-white/10 p-2 rounded-lg"
               >
-                <Mail className="h-5 w-5" />
-              </Button>
-              <Button 
-                size="icon" 
-                variant="ghost" 
-                className="text-white hover:bg-white/10"
+                <Mail className="h-6 w-6" />
+              </a>
+              <a
+                href="#"
+                aria-label="Visit ISMF Instagram page"
+                className="text-white/80 hover:text-[#E4405F] transition-all duration-300 transform hover:scale-110 hover:bg-white/10 p-2 rounded-lg"
+                onClick={(e) => e.preventDefault()}
               >
-                <Instagram className="h-5 w-5" />
-              </Button>
+                <Instagram className="h-6 w-6" />
+              </a>
+              </div>
             </div>
           </div>
 
@@ -50,16 +56,14 @@ export const Footer = () => {
           <div>
             <h3 className="font-bold mb-4 text-white">Contact</h3>
             <ul className="space-y-2 text-white/80">
-              <li>University College Dublin</li>
-              <li>Belfield, Dublin 4</li>
-              <li>Ireland</li>
+              <li>Dublin, Ireland</li>
               <li><a href="mailto:info@ismf.ie" className="hover:text-cornflower transition-colors">info@ismf.ie</a></li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-white/20 pt-8 text-center text-white/60">
-          <p>© 2024 Irish Student Managed Fund. All rights reserved.</p>
+          <p>© 2025 Irish Student Managed Fund. All rights reserved.</p>
         </div>
       </div>
     </footer>
