@@ -19,7 +19,7 @@ export default {
         cornflower: '#6184D8',
         delft: '#1D3461',
         oxford: '#011936',
-        blush: '#9CC9F3',
+        blush: '#26437E',
         'primary-contrast': '#ffffff',
         
         // Existing shadcn colors (keep for compatibility)

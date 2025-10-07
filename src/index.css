@@ -15,7 +15,7 @@ All colors MUST be HSL.
     --background: 54 100% 97%; /* ivory */
     --foreground: 213 100% 11%; /* oxford */
 
-    --card: 218 81% 79%; /* blush */
+    --card: 221 52% 32%; /* blush */
     --card-foreground: 213 100% 11%; /* oxford */
 
     --popover: 54 100% 97%; /* ivory */
@@ -24,10 +24,10 @@ All colors MUST be HSL.
     --primary: 227 64% 62%; /* cornflower */
     --primary-foreground: 0 0% 100%; /* white */
 
-    --secondary: 218 81% 79%; /* blush */
+    --secondary: 221 52% 32%; /* blush */
     --secondary-foreground: 227 64% 62%; /* cornflower */
 
-    --muted: 218 81% 79%; /* blush */
+    --muted: 221 52% 32%; /* blush */
     --muted-foreground: 213 50% 30%; /* muted oxford */
 
     --accent: 227 64% 62%; /* cornflower */
@@ -36,8 +36,8 @@ All colors MUST be HSL.
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 218 81% 85%; /* light blush */
-    --input: 218 81% 85%; /* light blush */
+    --border: 221 52% 45%; /* light blush */
+    --input: 221 52% 45%; /* light blush */
     --ring: 227 64% 62%; /* cornflower */
 
     --radius: 0.75rem;
