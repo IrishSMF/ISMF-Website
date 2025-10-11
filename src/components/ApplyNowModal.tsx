@@ -96,11 +96,11 @@ export const ApplyNowModal: React.FC<ApplyNowModalProps> = ({ isOpen, onClose })
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ duration: 0.2, ease: 'easeOut' }}
-              className="bg-gradient-to-br from-purple-50 via-white to-purple-50 rounded-2xl shadow-2xl max-w-md w-full overflow-hidden border border-purple-200"
+              className="bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden border border-gray-200"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Header */}
-              <div className="bg-gradient-to-r from-purple-600 to-purple-500 text-white p-6 relative">
+              <div className="bg-[#26437E] text-white p-6 relative">
                 <button
                   onClick={handleClose}
                   className="absolute top-4 right-4 text-white hover:bg-white/20 rounded-full p-2 transition-colors"
@@ -108,8 +108,8 @@ export const ApplyNowModal: React.FC<ApplyNowModalProps> = ({ isOpen, onClose })
                 >
                   <X className="h-5 w-5" />
                 </button>
-                <h2 className="text-2xl font-bold mb-2">Join ISMF</h2>
-                <p className="text-purple-100 text-sm">Select a division to apply</p>
+                <h2 className="text-2xl font-bold mb-2 text-white">Join ISMF</h2>
+                <p className="text-[#E0E6F3] text-sm">Select a division to apply</p>
               </div>
 
               {/* Content */}
@@ -125,9 +125,9 @@ export const ApplyNowModal: React.FC<ApplyNowModalProps> = ({ isOpen, onClose })
                       className={`w-full p-4 rounded-xl border-2 transition-all duration-200 text-left relative ${
                         division.isOpen
                           ? selectedDivision === division.id
-                            ? 'border-purple-500 bg-purple-50 shadow-md'
-                            : 'border-purple-200 hover:border-purple-400 hover:bg-purple-50/50 bg-white'
-                          : 'border-gray-200 bg-gray-50 cursor-not-allowed opacity-50'
+                            ? 'border-[#26437E] bg-[#26437E] shadow-md'
+                            : 'border-[#26437E] hover:bg-[#EAF0FB] bg-white'
+                          : 'border-gray-200 bg-[#f4f4f4] cursor-not-allowed opacity-50'
                       }`}
                     >
                       <div className="flex items-center justify-between">
@@ -136,15 +136,15 @@ export const ApplyNowModal: React.FC<ApplyNowModalProps> = ({ isOpen, onClose })
                             className={`font-semibold ${
                               division.isOpen
                                 ? selectedDivision === division.id
-                                  ? 'text-purple-700'
-                                  : 'text-gray-800'
-                                : 'text-gray-400'
+                                  ? 'text-white'
+                                  : 'text-[#26437E]'
+                                : 'text-[#A0A0A0]'
                             }`}
                           >
                             {division.name}
                           </p>
                           {!division.isOpen && (
-                            <p className="text-xs text-gray-400 mt-1">
+                            <p className="text-xs text-[#A0A0A0] mt-1">
                               Applications currently closed
                             </p>
                           )}
@@ -155,7 +155,7 @@ export const ApplyNowModal: React.FC<ApplyNowModalProps> = ({ isOpen, onClose })
                             animate={{ scale: 1 }}
                             transition={{ type: 'spring', stiffness: 500, damping: 30 }}
                           >
-                            <CheckCircle2 className="h-6 w-6 text-purple-600" />
+                            <CheckCircle2 className="h-6 w-6 text-white" />
                           </motion.div>
                         )}
                       </div>
@@ -164,9 +164,9 @@ export const ApplyNowModal: React.FC<ApplyNowModalProps> = ({ isOpen, onClose })
                 </div>
 
                 {/* Info text */}
-                <div className="mt-6 p-4 bg-purple-50 rounded-lg border border-purple-100">
-                  <p className="text-sm text-gray-600">
-                    <span className="font-semibold text-purple-700">Note:</span> Select an open
+                <div className="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                  <p className="text-sm text-gray-800">
+                    <span className="font-semibold text-[#26437E]">Note:</span> Select an open
                     division to continue with your application. Closed divisions are not currently
                     accepting applications.
                   </p>
@@ -178,7 +178,7 @@ export const ApplyNowModal: React.FC<ApplyNowModalProps> = ({ isOpen, onClose })
                 <Button
                   onClick={handleClose}
                   variant="outline"
-                  className="flex-1 border-purple-200 text-purple-700 hover:bg-purple-50"
+                  className="flex-1 border-[#26437E] text-[#26437E] hover:bg-[#EAF0FB]"
                 >
                   Cancel
                 </Button>
@@ -187,7 +187,7 @@ export const ApplyNowModal: React.FC<ApplyNowModalProps> = ({ isOpen, onClose })
                   disabled={!selectedDivision}
                   className={`flex-1 ${
                     selectedDivision
-                      ? 'bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-700 hover:to-purple-600 text-white'
+                      ? 'bg-[#26437E] hover:bg-[#1E3664] text-white'
                       : 'bg-gray-200 text-gray-400 cursor-not-allowed'
                   }`}
                 >
