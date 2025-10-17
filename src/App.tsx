@@ -8,10 +8,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
-import About from "./pages/About";
-import Divisions from "./pages/Divisions";
-import Research from "./pages/Research";
-import Performance from "./pages/Performance";
+import About from "./pages/About.jsx";
+import Divisions from "./pages/Divisions.jsx";
+import Research from "./pages/Research.jsx";
+import Performance from "./pages/Performance.jsx";
 
 const queryClient = new QueryClient();
 
