@@ -125,7 +125,7 @@ export const ApplyNowModal: React.FC<ApplyNowModalProps> = ({ isOpen, onClose })
                       className={`w-full p-4 rounded-xl border-2 transition-all duration-200 text-left relative ${
                         division.isOpen
                           ? selectedDivision === division.id
-                            ? 'border-[#26437E] bg-[#26437E] shadow-md'
+                            ? 'border-[#26437E] bg-[#26437E] text-white shadow-md'
                             : 'border-[#26437E] hover:bg-[#EAF0FB] bg-white'
                           : 'border-gray-200 bg-[#f4f4f4] cursor-not-allowed opacity-50'
                       }`}
