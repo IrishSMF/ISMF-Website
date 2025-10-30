@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Linkedin } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useApplyModal } from "@/hooks/useApplyModal";
 import ismfLogo from "@/assets/ismf-logo.png";
 
@@ -39,15 +39,7 @@ export const Navigation = () => {
               </NavLink>
             ))}
 
-            <a
-              href="https://www.linkedin.com/company/irishsmf/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit ISMF LinkedIn page"
-              className="text-white/80 hover:text-[#0077B5] transition-all duration-300 transform hover:scale-110"
-            >
-              <Linkedin className="h-5 w-5" />
-            </a>
+            
 
             <Button onClick={openModal} className="bg-cornflower text-white hover:brightness-95">
               Apply Now
@@ -80,17 +72,7 @@ export const Navigation = () => {
                 </NavLink>
               ))}
 
-              <div className="flex items-center justify-center gap-4 pt-2">
-                <a
-                  href="https://www.linkedin.com/company/irishsmf/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Visit ISMF LinkedIn page"
-                  className="text-white/80 hover:text-[#0077B5] transition-all duration-300 transform hover:scale-110"
-                >
-                  <Linkedin className="h-6 w-6" />
-                </a>
-              </div>
+              <div className="flex items-center justify-center gap-4 pt-2"></div>
 
               <Button onClick={openModal} className="w-full bg-cornflower text-white hover:brightness-95">
                 Apply Now
