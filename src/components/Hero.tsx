@@ -102,6 +102,7 @@ export const Hero = () => {
                 size="lg" 
                 variant="outline"
                 className="text-lg px-8 py-4 border-2 border-white/30 bg-white/10 hover:bg-white hover:text-oxford transition-all duration-300 shadow-lg hover:shadow-xl backdrop-blur-sm"
+                onClick={() => navigate('/research')}
               >
                 View Research
                 <TrendingUp className="ml-2 h-5 w-5" />
