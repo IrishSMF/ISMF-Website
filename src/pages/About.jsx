@@ -3,124 +3,89 @@ import TeamGrid from "@/components/TeamGrid";
 
 // Team member data with the new structure
 const teamData = [
-  {
-    name: "Bénédict",
-    role: "Director of Equities",
-    description: "Leads the fundamental analysis and stock selection process.",
-    division: "Equities",
-    initials: "B",
-  },
-  {
-    name: "Carole",
-    role: "Marketing and Events",
-    description: "Manages all external communications, branding, and event planning.",
-    division: "Marketing",
-    initials: "C",
-  },
-  {
-    name: "Roisin",
-    role: "Marketing and Events",
-    description: "Manages all external communications, branding, and event planning.",
-    division: "Marketing",
-    initials: "R",
-  },
-  {
-    name: "Tejal",
-    role: "Chief Macroeconomist",
-    description: "Provides high-level economic analysis and forecasts influencing overall strategy.",
-    division: "Macro Research",
-    initials: "T",
-  },
-  {
-    name: "Jonah",
-    role: "Director of Quant",
-    description: "Oversees quantitative research, model development, and systematic strategies.",
-    division: "Quantitative Research",
-    initials: "J",
-  },
-  {
-    name: "Tanya",
-    role: "Director of Alternative Investments",
-    description: "Focuses on hedge funds, private equity, and real estate.",
-    division: "Alternative Investments",
-    initials: "T",
-  },
-  {
-    name: "Raj Aryan Upadhyaya",
-    role: "CEO",
-    description: "",
-    division: "Executive",
-    initials: "R",
-  },
-  {
-    name: "",
-    role: "COO",
-    description: "",
-    division: "Executive",
-    initials: "C",
-  },
-  {
-    name: "",
-    role: "CFO",
-    description: "",
-    division: "Executive",
-    initials: "C",
-  },
-  {
-    name: "",
+     {
+        name: "Raj Aryan Upadhyaya",
+        role: "Founder, Co-CEO",
+        description: "",
+        division: "Executive",
+        initials: "RAU",
+      },
+      {
+        name: "Caius Kauppi",
+        role: "Co-CEO",
+        description: "",
+        division: "Executive",
+        initials: "CK",
+      },
+      {
+        name: "Juliet Carty",
+        role: "Chairperson",
+        description: "",
+        division: "Executive",
+        initials: "JC",
+      },
+      {
+        name: "Krutika Dwivedi",
+        role: "Chairperson",
+        description: "",
+        division: "Executive",
+        initials: "KD",
+      },
+      {
+        name: "Kahmala Aamir",
+        role: "Chief Operations Officer",
+        description: "",
+        division: "Executive",
+        initials: "KA",
+      },
+      {
+        name: "Tanya Jindal",
+        role: "Chief Financial Officer, Director of Alternative Investments",
+        description: "",
+        division: "Executive",
+        initials: "TJ",
+      },
+      {
+        name: "Tejal Ramchandani",
+        role: "Chief Macroeconomist",
+        description: "",
+        division: "Executive",
+        initials: "TR",
+      },
+      {
+        name: "Can Atasever",
+        role: "Chief Technology Officer",
+        description: "",
+        division: "Executive",
+        initials: "CA",
+      },
+      {
+    name: "Bénédict Fromholz",
     role: "Director of Equities",
     description: "",
     division: "Equities",
-    initials: "D",
+    initials: "BF",
   },
   {
-    name: "",
-    role: "Director of Alternative Investments",
-    description: "",
-    division: "Alternative Investments",
-    initials: "D",
-  },
-  {
-    name: "",
-    role: "Director of Quant",
-    description: "",
-    division: "Quantitative Research",
-    initials: "D",
-  },
-  {
-    name: "",
-    role: "CMO",
+    name: "Carole Misdari",
+    role: "Chief Marketing Officer",
     description: "",
     division: "Marketing",
-    initials: "C",
+    initials: "CM",
   },
   {
-    name: "",
-    role: "CTO",
-    description: "",
-    division: "Technology",
-    initials: "C",
-  },
-  {
-    name: "",
+    name: "Roisin O'Sullivan Smyth",
     role: "Director of Events",
     description: "",
-    division: "Events",
-    initials: "D",
+    division: "Marketing",
+    initials: "ROS",
   },
   {
-    name: "",
-    role: "Director of Careers",
-    description: "",
-    division: "Careers",
-    initials: "D",
-  },
-  {
-    name: "",
-    role: "Chief Macroeconomist",
+    name: "Jonah Jjemba",
+    role: "Director of Quant Trading",
     description: "",
     division: "Macro Research",
-    initials: "C",
+    initials: "JJ",
   },
 ];
 
@@ -134,10 +99,10 @@ export default function About() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <header className="mb-12 text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-[#0A0A0A] mb-4">
-            Meet the Team
+            Meet the Committee
           </h1>
           <p className="mt-3 max-w-2xl mx-auto text-[#4A4A4A] text-lg">
-            The Irish Student Managed Fund leadership team spans equities,
+            The Irish Student Managed Fund leadership committee spans equities,
             macro, quant, and alternatives.
           </p>
         </header>
