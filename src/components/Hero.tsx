@@ -115,8 +115,6 @@ export const Hero = () => {
       {/* Animated stats section */}
       <motion.div 
         className="absolute bottom-10 left-0 right-0 z-10"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.8 }}
       >
         <div className="container mx-auto px-4">
@@ -130,7 +128,7 @@ export const Hero = () => {
       </motion.div>
       
       
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-ivory to-transparent" />
+      
     </section>
   );
 };
