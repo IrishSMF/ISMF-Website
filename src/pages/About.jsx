@@ -9,6 +9,7 @@ const teamData = [
         description: "",
         division: "Executive",
         initials: "RAU",
+        photo: "/team/raj-aryan-upadhyaya.png"
       },
       {
         name: "Caius Kauppi",
@@ -16,6 +17,7 @@ const teamData = [
         description: "",
         division: "Executive",
         initials: "CK",
+         photo: "/team/caius-kauppi.png"
       },
       {
         name: "Juliet Carty",
@@ -23,6 +25,7 @@ const teamData = [
         description: "",
         division: "Executive",
         initials: "JC",
+        photo: "/team/juliet-carty.png"
       },
       {
         name: "Krutika Dwivedi",
@@ -30,6 +33,7 @@ const teamData = [
         description: "",
         division: "Executive",
         initials: "KD",
+        photo: "/team/krutika-dwivedi.png"
       },
       {
         name: "Kahmala Aamir",
@@ -37,6 +41,7 @@ const teamData = [
         description: "",
         division: "Executive",
         initials: "KA",
+        photo: "/team/kahmala-aamir.png"
       },
       {
         name: "Tanya Jindal",
@@ -44,6 +49,7 @@ const teamData = [
         description: "",
         division: "Executive",
         initials: "TJ",
+        photo: "/team/tanya-jindal.png"
       },
       {
         name: "Tejal Ramchandani",
@@ -51,6 +57,7 @@ const teamData = [
         description: "",
         division: "Executive",
         initials: "TR",
+        photo: "/team/tejal-ramchandani.png"
       },
       {
         name: "Can Atasever",
@@ -58,35 +65,48 @@ const teamData = [
         description: "",
         division: "Executive",
         initials: "CA",
+        photo: "/team/can-atasever.png"
       },
       {
-    name: "Bénédict Fromholz",
-    role: "Director of Equities",
-    description: "",
-    division: "Equities",
-    initials: "BF",
-  },
-  {
-    name: "Carole Misdari",
-    role: "Chief Marketing Officer",
-    description: "",
-    division: "Marketing",
-    initials: "CM",
-  },
-  {
-    name: "Roisin O'Sullivan Smyth",
-    role: "Director of Events",
-    description: "",
-    division: "Marketing",
-    initials: "ROS",
-  },
-  {
-    name: "Jonah Jjemba",
-    role: "Director of Quant Trading",
-    description: "",
-    division: "Macro Research",
-    initials: "JJ",
-  },
+        name: "Bénédict Fromholz",
+        role: "Director of Equities",
+        description: "",
+        division: "Equities",
+        initials: "BF",
+        photo: "/team/benedict-fromholz.png"
+      },
+      {
+        name: "Carole Misdari",
+        role: "Chief Marketing Officer",
+        description: "",
+        division: "Marketing",
+        initials: "CM",
+        photo: "/team/carole-misdari.png"
+      },
+      {
+        name: "Roisin O'Sullivan Smyth",
+        role: "Director of Events",
+        description: "",
+        division: "Marketing",
+        initials: "ROS",
+        photo: "/team/roisin-osullivan-smyth.png"
+      },
+      {
+        name: "Jonah Jjemba",
+        role: "Director of Quant Trading",
+        description: "",
+        division: "Macro Research",
+        initials: "JJ",
+        photo: "/team/jonah-jjemba.png"
+      },
+      {
+        name: "Louis Zhu",
+        role: "Director of Alternative Investments",
+        description: "",
+        division: "Macro Research",
+        initials: "LZ",
+        photo: "/team/louis-zhu.png"
+      }
 ];
 
 export default function About() {

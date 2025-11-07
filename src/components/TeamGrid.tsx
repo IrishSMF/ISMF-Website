@@ -14,6 +14,7 @@ interface TeamMember {
   description: string;
   division?: string;
   initials: string;
+  photo?: string; // <-- NEW (optional)
 }
 
 interface TeamGridProps {
@@ -25,6 +26,7 @@ const TeamMemberCard: React.FC<{ member: TeamMember; onCardClick: () => void }> 
   onCardClick,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [imgErr, setImgErr] = useState(false); // <-- NEW (fallback if image fails)
 
   return (
     <div
@@ -42,9 +44,18 @@ const TeamMemberCard: React.FC<{ member: TeamMember; onCardClick: () => void }> 
       }}
     >
       <div className="flex flex-col items-center text-center space-y-4">
-        {/* Initials Circle */}
-        <div className="w-10 h-10 rounded-full bg-[#26437E] text-white font-bold text-lg flex items-center justify-center flex-shrink-0">
-          {member.initials}
+        {/* Avatar: image if available, otherwise initials */}
+        <div className="w-24 h-24 rounded-full overflow-hidden bg-[#26437E] flex items-center justify-center flex-shrink-0">
+          {member.photo && !imgErr ? (
+            <img
+              src={member.photo}
+              alt={member.name}
+              className="w-full h-full object-cover"
+              onError={() => setImgErr(true)}
+            />
+          ) : (
+            <span className="text-white font-bold text-lg">{member.initials}</span>
+          )}
         </div>
 
         {/* Name and Role */}
@@ -92,6 +103,7 @@ const TeamModal: React.FC<{
   onClose: () => void;
 }> = ({ member, isOpen, onClose }) => {
   if (!member) return null;
+  const [imgErr, setImgErr] = useState(false); // <-- NEW
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -103,8 +115,17 @@ const TeamModal: React.FC<{
         </DialogHeader>
         <div className="space-y-4 pt-4">
           <div className="flex items-center gap-4">
-            <div className="w-16 h-16 rounded-full bg-[#26437E] text-white font-bold text-2xl flex items-center justify-center flex-shrink-0">
-              {member.initials}
+            <div className="w-24 h-24 rounded-full overflow-hidden bg-[#26437E] flex items-center justify-center flex-shrink-0">
+              {member.photo && !imgErr ? (
+                <img
+                  src={member.photo}
+                  alt={member.name}
+                  className="w-full h-full object-cover"
+                  onError={() => setImgErr(true)}
+                />
+              ) : (
+                <span className="text-white font-bold text-2xl">{member.initials}</span>
+              )}
             </div>
             <div>
               <p className="text-lg font-semibold text-[#0A0A0A]">
@@ -115,15 +136,10 @@ const TeamModal: React.FC<{
               )}
             </div>
           </div>
-          {member.description && (
-            <p className="text-[#4A4A4A] leading-relaxed">
-              {member.description}
-            </p>
-          )}
-          {!member.description && (
-            <p className="text-[#4A4A4A] italic">
-              Additional information coming soon.
-            </p>
+          {member.description ? (
+            <p className="text-[#4A4A4A] leading-relaxed">{member.description}</p>
+          ) : (
+            <p className="text-[#4A4A4A] italic">Additional information coming soon.</p>
           )}
         </div>
       </DialogContent>
@@ -132,9 +148,7 @@ const TeamModal: React.FC<{
 };
 
 export default function TeamGrid({ members }: TeamGridProps) {
-  const [selectedMember, setSelectedMember] = useState<TeamMember | null>(
-    null
-  );
+  const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleCardClick = (member: TeamMember) => {
@@ -166,4 +180,3 @@ export default function TeamGrid({ members }: TeamGridProps) {
     </>
   );
 }
-
