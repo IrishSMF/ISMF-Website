@@ -68,62 +68,16 @@ export interface EventsCalendarProps {
 
 const defaultEvents: CalendarEvent[] = [
   {
-    id: "ismf-summit",
-    title: "ISMF Annual Summit",
+    id: "cfa-info-session-2025-10-29",
+    title: "CFA Society Ireland Info Session",
     description:
-      "Our flagship gathering featuring keynote speakers from leading asset managers, macro panels, and networking with industry mentors.",
-    start: "2024-11-14T17:00:00.000Z",
-    end: "2024-11-14T19:00:00.000Z",
-    location: "Trinity Business School, Dublin",
-    category: "Flagship",
-    mode: "In person",
-    registrationUrl: "https://irishsmf.com/events/annual-summit",
-  },
-  {
-    id: "quant-lab",
-    title: "Quant Lab: Systematic Strategies",
-    description:
-      "Hands-on session exploring factor models, Python tooling, and backtesting workflows with our quant research team.",
-    start: "2024-10-22T18:00:00.000Z",
-    end: "2024-10-22T19:30:00.000Z",
-    location: "Innovation Hub, Trinity College Dublin",
-    category: "Workshop",
-    mode: "Hybrid",
-    registrationUrl: "https://irishsmf.com/events/quant-lab",
-  },
-  {
-    id: "macro-brief",
-    title: "Macro Briefing: Q4 Outlook",
-    description:
-      "Monthly macro update covering global rates, inflation dynamics, and sector implications from the ISMF Macro Desk.",
-    start: "2024-10-02T08:00:00.000Z",
-    end: "2024-10-02T09:00:00.000Z",
-    location: "Online Webinar",
+      "Members from CFA Society Ireland shared what the CFA qualification entails, how to navigate the pathway, and the career opportunities it can unlock. Hosted in collaboration with the University of Galway Student Managed Fund and Ulster University’s SMF.",
+    start: "2025-10-29T17:30:00.000Z",
+    end: "2025-10-29T18:30:00.000Z",
+    location: "Online — link provided to registered attendees",
     category: "Briefing",
     mode: "Virtual",
-    registrationUrl: "https://irishsmf.com/events/macro-briefing",
-  },
-  {
-    id: "equities-roundtable",
-    title: "Equities Roundtable",
-    description:
-      "Small-group discussion on current portfolio convictions, trade structuring, and risk management insights.",
-    start: "2024-09-18T17:30:00.000Z",
-    end: "2024-09-18T18:30:00.000Z",
-    location: "Room 3.12, Trinity Business School",
-    category: "Networking",
-    mode: "In person",
-  },
-  {
-    id: "case-competition",
-    title: "Equity Research Case Competition Finals",
-    description:
-      "Final presentations from student teams pitching long/short ideas to a panel of industry judges.",
-    start: "2024-09-05T10:00:00.000Z",
-    end: "2024-09-05T12:30:00.000Z",
-    location: "Deloitte Auditorium, Dublin",
-    category: "Competition",
-    mode: "In person",
+    registrationUrl: "https://lnkd.in/eDHRSFGn",
   },
 ];
 
