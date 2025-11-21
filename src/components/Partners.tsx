@@ -47,9 +47,13 @@ export const Partners = () => {
               Partner organizations gain access to talented students, research insights, 
               and opportunities to support meaningful education initiatives.
             </p>
-            <button className="bg-primary-foreground text-primary px-6 py-2 rounded-lg font-semibold hover:scale-105 transition-transform">
+            {/* Action: clicking Partner With Us opens an email to the ISMF Gmail account */}
+            <a
+              href="mailto:irishstudentfund@gmail.com"
+              className="inline-block bg-primary-foreground text-primary px-6 py-2 rounded-lg font-semibold hover:scale-105 transition-transform"
+            >
               Partner With Us
-            </button>
+            </a>
           </div>
         </Card>
       </div>
