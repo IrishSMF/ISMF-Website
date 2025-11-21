@@ -26,7 +26,8 @@ const features = [
 
 export const AboutSection = () => {
   return (
-    <section className="py-16 bg-muted/30">
+    // Background: remove light blue wash so this section sits on the main page background
+    <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">What is ISMF?</h2>
