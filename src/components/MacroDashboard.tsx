@@ -165,7 +165,8 @@ export const MacroDashboard = () => {
 
   if (isLoading) {
     return (
-      <section className="py-16 bg-muted/30">
+      // Background: use neutral beige instead of blue band behind the dashboard
+      <section className="py-16 bg-[#FFFCF2]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -195,7 +196,8 @@ export const MacroDashboard = () => {
 
   if (error) {
     return (
-      <section className="py-16 bg-muted/30">
+      // Background: same beige backdrop for error state
+      <section className="py-16 bg-[#FFFCF2]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -216,7 +218,8 @@ export const MacroDashboard = () => {
   }
 
   return (
-    <section className="py-16 bg-muted/30">
+    // Background: main macro dashboard sits on beige, while keeping existing card/chart colors
+    <section className="py-16 bg-[#FFFCF2]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
