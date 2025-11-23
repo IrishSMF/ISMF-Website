@@ -70,7 +70,7 @@ const teamData = [
         name: "Can Atasever",
         role: "Chief Technology Officer",
         description: "",
-        division: "Tech-Dev",
+        division: "Technology",
         initials: "CA",
         photo: `${import.meta.env.BASE_URL}team/can-atasever.png`,
         linkedin: "https://www.linkedin.com/in/icancode/"
@@ -104,9 +104,9 @@ const teamData = [
       },
       {
         name: "Jonah Jjemba",
-        role: "Director of Quant Trading",
+        role: "Director of Quant",
         description: "",
-        division: "Quant",
+        division: "Quantitative Finance",
         initials: "JJ",
         photo: `${import.meta.env.BASE_URL}team/jonah-jjemba.png`,
         linkedin: "https://www.linkedin.com/in/jonah-jjemba-9042a01b7/"
@@ -126,8 +126,8 @@ export default function People() {
             Meet the Committee
           </h1>
           <p className="mt-3 max-w-2xl mx-auto text-[#4A4A4A] text-lg">
-            The Irish Student Managed Fund leadership committee spans equities,
-            macro, quant, and alternatives.
+            The Irish Student Managed Fund leadership committee spans Equities,
+            Macro, Quant, and Alternatives.
           </p>
         </header>
 
