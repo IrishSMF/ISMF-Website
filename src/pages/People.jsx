@@ -76,13 +76,13 @@ const teamData = [
         linkedin: "https://www.linkedin.com/in/icancode/"
       },
       {
-        name: "Bénédict Fromholz",
-        role: "Director of Equities",
+        name: "Klaudia Ciepiela",
+        role: "Director of Equity Investments",
         description: "",
         division: "Equities",
-        initials: "BF",
-        photo: `${import.meta.env.BASE_URL}team/benedict-fromholz.png`,
-        linkedin: "https://www.linkedin.com/in/benedict-fromholz/"
+        initials: "KC",
+        photo: `${import.meta.env.BASE_URL}team/klaudia-ciepiela.png`,
+        linkedin: "https://www.linkedin.com/in/klaudia-ciepiela-1b22a1254/"
       },
       {
         name: "Carole Misdari",
