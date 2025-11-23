@@ -25,7 +25,7 @@ const App = () => {
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter basename="/ISMF-Website">
+        <BrowserRouter basename="/">
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<Index />} />
