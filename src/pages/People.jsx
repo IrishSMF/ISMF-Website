@@ -61,7 +61,7 @@ const teamData = [
         name: "Tejal Ramchandani",
         role: "Chief Macroeconomist",
         description: "",
-        division: "Executive",
+        division: "Macro Research",
         initials: "TR",
         photo: `${import.meta.env.BASE_URL}team/tejal-ramchandani.png`,
         linkedin: "https://www.linkedin.com/in/tejal-ramchandani-599666294/"
@@ -70,7 +70,7 @@ const teamData = [
         name: "Can Atasever",
         role: "Chief Technology Officer",
         description: "",
-        division: "Executive",
+        division: "Tech-Dev",
         initials: "CA",
         photo: `${import.meta.env.BASE_URL}team/can-atasever.png`,
         linkedin: "https://www.linkedin.com/in/icancode/"
@@ -106,7 +106,7 @@ const teamData = [
         name: "Jonah Jjemba",
         role: "Director of Quant Trading",
         description: "",
-        division: "Macro Research",
+        division: "Quant",
         initials: "JJ",
         photo: `${import.meta.env.BASE_URL}team/jonah-jjemba.png`,
         linkedin: "https://www.linkedin.com/in/jonah-jjemba-9042a01b7/"
