@@ -91,7 +91,7 @@ export default function Research() {
                     <FileText className="w-6 h-6 text-[#26437E]" />
                     <div>
                       <p className="text-sm font-semibold text-[#0A0A0A]">
-                      ISMF Macro Outlook — November Edition
+                        ISMF Macro Outlook — November Edition
                       </p>
     
                       <p className="text-xs text-[#4A4A4A] mt-1 leading-relaxed">
