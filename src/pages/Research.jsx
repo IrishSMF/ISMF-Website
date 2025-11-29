@@ -20,7 +20,7 @@ export default function Research() {
       {/* Hero / Intro */}
       <section className="max-w-5xl mx-auto px-6 pb-20 grid gap-8 md:grid-cols-[1.8fr,1.4fr]">
         <div className="bg-white rounded-2xl shadow-md p-6 sm:p-8 border border-[#E2E8F0] mb-8 mt-8">
-          <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-4">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 leading-tight text-center">
             Research
           </h1>
 

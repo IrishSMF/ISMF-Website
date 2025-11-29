@@ -122,7 +122,7 @@ export default function People() {
     <section className="min-h-screen w-full bg-[#FFFDF5]">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <header className="mb-12 text-center">
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-[#0A0A0A] mb-4">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[#0A0A0A] mb-4 leading-tight">
             Meet the Committee
           </h1>
           <p className="mt-3 max-w-2xl mx-auto text-[#4A4A4A] text-lg">
