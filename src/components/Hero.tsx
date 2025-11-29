@@ -5,7 +5,7 @@ import CountUp from "react-countup";
 import ismfLogo from "@/assets/ismf-logo.png";
 import { useNavigate } from "react-router-dom";
 
-const Stat = ({ label, value, suffix = "", duration = 2.5 }: { label: string; value: number; suffix?: string; duration?: number }) => {
+const Stat = ({ label, value, suffix = "", duration = 2.5 }: { label: string; value: number | string; suffix?: string; duration?: number }) => {
   return (
     <motion.div 
       className="text-center"
@@ -15,8 +15,17 @@ const Stat = ({ label, value, suffix = "", duration = 2.5 }: { label: string; va
       viewport={{ once: true }}
     >
       <p className="text-3xl md:text-5xl font-bold text-white mb-2">
-        <CountUp end={value} duration={duration} decimals={value < 10 ? 1 : 0} />
-        {suffix}
+        {typeof value === 'number' ? (
+          <>
+            <CountUp end={value} duration={duration} decimals={value < 10 ? 1 : 0} />
+            {suffix}
+          </>
+        ) : (
+          <>
+            {value}
+            {suffix}
+          </>
+        )}
       </p>
       <p className="text-sm md:text-base text-white/80 font-medium tracking-wide">{label}</p>
     </motion.div>
@@ -120,10 +129,9 @@ export const Hero = () => {
       >
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-3 gap-8 md:gap-16">
-            {/* will change numbers later, just need to run */}
-            <Stat label="Assets Under Management" value={250} suffix="M+" /> 
-            <Stat label="Active Members" value={250} />
-            <Stat label="Annual Return" value={250} suffix="%" />
+            <Stat label="Assets Under Management" value="-" /> 
+            <Stat label="Active Members" value="100+" />
+            <Stat label="Annual Return" value="-" />
           </div>
         </div>
       </motion.div>

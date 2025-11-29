@@ -76,9 +76,6 @@ export const JoinSection = () => {
                 Apply Now
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
-              <p className="text-sm text-muted-foreground mt-4">
-                Application deadline: INSERT DATE HERE
-              </p>
             </div>
           </Card>
         </div>
