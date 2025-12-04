@@ -1,4 +1,5 @@
 import React, { useEffect } from "react"
+import { Helmet } from "react-helmet";
 import { PerformanceChart } from "@/components/PerformanceChart"
 import { PortfolioBreakdown } from "@/components/PortfolioBreakdown"
 import { MacroDashboard } from "@/components/MacroDashboard";

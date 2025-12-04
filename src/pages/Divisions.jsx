@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { ChevronDown, TrendingUp, Briefcase, Code, Megaphone, BarChart3, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 

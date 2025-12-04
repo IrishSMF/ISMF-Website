@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import TeamGrid from "@/components/TeamGrid";
 
 // Team member data with the new structure

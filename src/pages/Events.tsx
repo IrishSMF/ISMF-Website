@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 const Events: React.FC = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);

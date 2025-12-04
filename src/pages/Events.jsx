@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-
+import { Helmet } from "react-helmet";
 import EventsCalendar from "@/components/ui/EventsCalendar";
 
 export default function Events() {

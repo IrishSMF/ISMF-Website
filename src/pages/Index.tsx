@@ -1,4 +1,5 @@
 // import { Navigation } from "@/components/Navigation";
+import { Helmet } from "react-helmet";
 import { Hero } from "@/components/Hero";
 import { AboutSection } from "@/components/AboutSection";
 import { Sectors } from "@/components/Sectors";
