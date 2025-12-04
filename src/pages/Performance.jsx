@@ -4,12 +4,18 @@ import { PerformanceChart } from "@/components/PerformanceChart"
 import { PortfolioBreakdown } from "@/components/PortfolioBreakdown"
 import { MacroDashboard } from "@/components/MacroDashboard";
 
+export const metadata = {
+  title: "Performance — Irish Student Managed Fund",
+  description: "Track our fund's portfolio performance and allocation across different sectors and asset classes."
+};
+
 export default function Performance(){
     useEffect(() => { window.scrollTo(0, 0) }, [])
     return (
         <>
           <Helmet>
             <title>Performance — Irish Student Managed Fund</title>
+            <meta name="description" content="Track our fund's portfolio performance and allocation across different sectors and asset classes." />
           </Helmet>
           <section className="container mx-auto px-4 py-16">
             <div className="mb-12">

@@ -9,11 +9,17 @@ import { Partners } from "@/components/Partners";
 import { JoinSection } from "@/components/JoinSection";
 // import { Footer } from "@/components/Footer";
 
+export const metadata = {
+  title: "Home — Irish Student Managed Fund",
+  description: "Welcome to the Irish Student Managed Fund, where education meets empowerment. We're on a mission to revolutionise the student experience by providing a unique investment platform tailored for students."
+};
+
 const Index = () => {
   return (
     <>
       <Helmet>
         <title>Home — Irish Student Managed Fund</title>
+        <meta name="description" content="Welcome to the Irish Student Managed Fund, where education meets empowerment. We're on a mission to revolutionise the student experience by providing a unique investment platform tailored for students." />
       </Helmet>
       <div className="min-h-screen">
 

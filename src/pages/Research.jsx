@@ -3,6 +3,11 @@ import { Helmet } from "react-helmet";
 import { FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+export const metadata = {
+  title: "Research — Irish Student Managed Fund",
+  description: "At the Irish Student Managed Fund, research underpins every investment decision. Our Macro Research Team publishes bi-monthly macro outlook reports."
+};
+
 export default function Research() {
 
 
@@ -20,6 +25,7 @@ export default function Research() {
     <>
       <Helmet>
         <title>Research — Irish Student Managed Fund</title>
+        <meta name="description" content="At the Irish Student Managed Fund, research underpins every investment decision. Our Macro Research Team publishes bi-monthly macro outlook reports." />
       </Helmet>
       <main className="min-h-screen bg-[#FAF9F5] text-[#0A0A0A] pt-24">
       {/* Hero / Intro */}

@@ -42,6 +42,11 @@ const divisions = [
   },
 ];
 
+export const metadata = {
+  title: "Divisions — Irish Student Managed Fund",
+  description: "Explore the diverse divisions that drive our investment strategy and operations."
+};
+
 export default function Divisions() {
   const [activeDivision, setActiveDivision] = useState(null);
 
@@ -64,6 +69,7 @@ export default function Divisions() {
     <>
       <Helmet>
         <title>Divisions — Irish Student Managed Fund</title>
+        <meta name="description" content="Explore the diverse divisions that drive our investment strategy and operations." />
       </Helmet>
       <section className="bg-[#FFFDF5] min-h-screen w-full">
       <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">

@@ -2,6 +2,11 @@ import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
+export const metadata = {
+  title: "404 — Irish Student Managed Fund",
+  description: "Page not found. Return to the Irish Student Managed Fund homepage."
+};
+
 const NotFound = () => {
   const location = useLocation();
 
@@ -13,6 +18,7 @@ const NotFound = () => {
     <>
       <Helmet>
         <title>404 — Irish Student Managed Fund</title>
+        <meta name="description" content="Page not found. Return to the Irish Student Managed Fund homepage." />
       </Helmet>
       <div className="flex min-h-screen items-center justify-center bg-gray-100">
       <div className="text-center">

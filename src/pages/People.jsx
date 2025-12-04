@@ -123,6 +123,11 @@ const teamData = [
       },
 ];
 
+export const metadata = {
+  title: "People — Irish Student Managed Fund",
+  description: "Meet the Irish Student Managed Fund leadership committee spanning Equities, Macro, Quant, and Alternatives."
+};
+
 export default function People() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -132,6 +137,7 @@ export default function People() {
     <>
       <Helmet>
         <title>People — Irish Student Managed Fund</title>
+        <meta name="description" content="Meet the Irish Student Managed Fund leadership committee spanning Equities, Macro, Quant, and Alternatives." />
       </Helmet>
       <section className="min-h-screen w-full bg-[#FFFDF5]">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
