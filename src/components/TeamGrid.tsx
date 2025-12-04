@@ -31,7 +31,7 @@ const TeamMemberCard: React.FC<{ member: TeamMember }> = ({ member }) => {
           {member.photo && !imgErr ? (
             <img
               src={member.photo}
-              alt={member.name}
+              alt={`Portrait photo of ${member.name}, ${member.role}${member.division ? ` in the ${member.division} division` : ''} at ISMF`}
               className="w-full h-full object-cover"
               onError={() => setImgErr(true)}
             />

@@ -8,7 +8,7 @@ export const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-2">
-            <img src={ismfLogo} alt="ISMF Logo" className="h-16 w-auto mb-4" />
+            <img src={ismfLogo} alt="ISMF logo in the footer of the Irish Student Managed Fund website" className="h-16 w-auto mb-4" />
             <p className="text-white/80 mb-4">
               Empowering Irish students with hands-on investment experience and financial education.
             </p>

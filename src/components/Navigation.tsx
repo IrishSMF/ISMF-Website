@@ -11,12 +11,12 @@ export const Navigation = () => {
   const { openModal } = useApplyModal();
 
   const navLinks = [
-    {label: "Home", to: "/"},
-    { label: "People", to: "/people" },
+    { label: "About", to: "/about" },
     { label: "Divisions", to: "/divisions" },
     { label: "Events", to: "/events" },
     { label: "Research", to: "/research" },
     { label: "Performance", to: "/performance" },
+    { label: "Events", href: "/events" },
   ];
 
   const linkClass = ({ isActive }: { isActive: boolean }) =>
@@ -30,7 +30,7 @@ export const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo links to Home */}
           <Link to="/" className="flex items-center gap-2">
-            <img src={ismfLogo} alt="ISMF Logo" className="h-10 w-auto" />
+            <img src={ismfLogo} alt="ISMF logo linking to the Irish Student Managed Fund homepage" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Nav */}

@@ -60,7 +60,7 @@ export const Hero = () => {
           >
             <motion.img 
               src={ismfLogo} 
-              alt="ISMF Logo" 
+              alt="ISMF logo displayed on the hero section of the Irish Student Managed Fund homepage" 
               className="h-24 md:h-32 w-auto mb-8 drop-shadow-2xl"
               animate={{ y: [0, -8, 0] }}
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
