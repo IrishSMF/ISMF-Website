@@ -17,7 +17,11 @@ export default function Research() {
 
 
   return (
-    <main className="min-h-screen bg-[#FAF9F5] text-[#0A0A0A] pt-24">
+    <>
+      <Helmet>
+        <title>Research — Irish Student Managed Fund</title>
+      </Helmet>
+      <main className="min-h-screen bg-[#FAF9F5] text-[#0A0A0A] pt-24">
       {/* Hero / Intro */}
       <section className="max-w-5xl mx-auto px-6 pb-20 grid gap-8 md:grid-cols-[1.8fr,1.4fr]">
         <div className="bg-white rounded-2xl shadow-md p-6 sm:p-8 border border-[#E2E8F0] mb-8 mt-8">
@@ -108,5 +112,6 @@ export default function Research() {
         </div>
       </section>
     </main>
+    </>
   );
 }

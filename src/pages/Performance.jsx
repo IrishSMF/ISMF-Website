@@ -7,7 +7,11 @@ import { MacroDashboard } from "@/components/MacroDashboard";
 export default function Performance(){
     useEffect(() => { window.scrollTo(0, 0) }, [])
     return (
-        <section className="container mx-auto px-4 py-16">
+        <>
+          <Helmet>
+            <title>Performance — Irish Student Managed Fund</title>
+          </Helmet>
+          <section className="container mx-auto px-4 py-16">
             <div className="mb-12">
                 <h1 className="text-3xl font-bold mb-6 text-center">Portfolio Performance</h1>
                 <PerformanceChart />
@@ -20,5 +24,6 @@ export default function Performance(){
                 <MacroDashboard />
             </div>
         </section>
+        </>
     )
 }

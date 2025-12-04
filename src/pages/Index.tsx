@@ -11,7 +11,11 @@ import { JoinSection } from "@/components/JoinSection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <>
+      <Helmet>
+        <title>Home — Irish Student Managed Fund</title>
+      </Helmet>
+      <div className="min-h-screen">
 
       <main>
         <div id="home">
@@ -30,6 +34,7 @@ const Index = () => {
       </main>
 
     </div>
+    </>
   );
 };
 

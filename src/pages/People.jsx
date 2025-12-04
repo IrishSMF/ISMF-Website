@@ -129,7 +129,11 @@ export default function People() {
   }, []);
 
   return (
-    <section className="min-h-screen w-full bg-[#FFFDF5]">
+    <>
+      <Helmet>
+        <title>People — Irish Student Managed Fund</title>
+      </Helmet>
+      <section className="min-h-screen w-full bg-[#FFFDF5]">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <header className="mb-12 text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[#0A0A0A] mb-4 leading-tight">
@@ -144,5 +148,6 @@ export default function People() {
         <TeamGrid members={teamData} />
       </div>
     </section>
+    </>
   );
 }

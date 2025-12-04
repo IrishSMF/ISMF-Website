@@ -61,7 +61,11 @@ export default function Divisions() {
   };
 
   return (
-    <section className="bg-[#FFFDF5] min-h-screen w-full">
+    <>
+      <Helmet>
+        <title>Divisions — Irish Student Managed Fund</title>
+      </Helmet>
+      <section className="bg-[#FFFDF5] min-h-screen w-full">
       <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
         <header className="mb-12 text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[#26437E] mb-4 leading-tight">
@@ -144,5 +148,6 @@ export default function Divisions() {
         </div>
       </div>
     </section>
+    </>
   );
 }
