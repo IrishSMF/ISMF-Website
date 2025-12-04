@@ -70,6 +70,12 @@ export default function Divisions() {
       <Helmet>
         <title>Divisions — Irish Student Managed Fund</title>
         <meta name="description" content="Explore the diverse divisions that drive our investment strategy and operations." />
+        <meta property="og:title" content="Divisions — Irish Student Managed Fund" />
+        <meta property="og:description" content="Explore the diverse divisions that drive our investment strategy and operations." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Divisions — Irish Student Managed Fund" />
+        <meta name="twitter:description" content="Explore the diverse divisions that drive our investment strategy and operations." />
       </Helmet>
       <section className="bg-[#FFFDF5] min-h-screen w-full">
       <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">

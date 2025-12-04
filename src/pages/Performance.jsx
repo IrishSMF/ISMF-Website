@@ -16,6 +16,12 @@ export default function Performance(){
           <Helmet>
             <title>Performance — Irish Student Managed Fund</title>
             <meta name="description" content="Track our fund's portfolio performance and allocation across different sectors and asset classes." />
+            <meta property="og:title" content="Performance — Irish Student Managed Fund" />
+            <meta property="og:description" content="Track our fund's portfolio performance and allocation across different sectors and asset classes." />
+            <meta property="og:type" content="website" />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content="Performance — Irish Student Managed Fund" />
+            <meta name="twitter:description" content="Track our fund's portfolio performance and allocation across different sectors and asset classes." />
           </Helmet>
           <section className="container mx-auto px-4 py-16">
             <div className="mb-12">

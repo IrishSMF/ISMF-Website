@@ -19,6 +19,12 @@ const NotFound = () => {
       <Helmet>
         <title>404 — Irish Student Managed Fund</title>
         <meta name="description" content="Page not found. Return to the Irish Student Managed Fund homepage." />
+        <meta property="og:title" content="404 — Irish Student Managed Fund" />
+        <meta property="og:description" content="Page not found. Return to the Irish Student Managed Fund homepage." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="404 — Irish Student Managed Fund" />
+        <meta name="twitter:description" content="Page not found. Return to the Irish Student Managed Fund homepage." />
       </Helmet>
       <div className="flex min-h-screen items-center justify-center bg-gray-100">
       <div className="text-center">

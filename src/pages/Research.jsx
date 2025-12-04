@@ -26,6 +26,12 @@ export default function Research() {
       <Helmet>
         <title>Research — Irish Student Managed Fund</title>
         <meta name="description" content="At the Irish Student Managed Fund, research underpins every investment decision. Our Macro Research Team publishes bi-monthly macro outlook reports." />
+        <meta property="og:title" content="Research — Irish Student Managed Fund" />
+        <meta property="og:description" content="At the Irish Student Managed Fund, research underpins every investment decision. Our Macro Research Team publishes bi-monthly macro outlook reports." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Research — Irish Student Managed Fund" />
+        <meta name="twitter:description" content="At the Irish Student Managed Fund, research underpins every investment decision. Our Macro Research Team publishes bi-monthly macro outlook reports." />
       </Helmet>
       <main className="min-h-screen bg-[#FAF9F5] text-[#0A0A0A] pt-24">
       {/* Hero / Intro */}

@@ -13,6 +13,12 @@ const Events: React.FC = () => {
       <Helmet>
         <title>Events — Irish Student Managed Fund</title>
         <meta name="description" content="Our events are a great way to gain knowledge about finance and network with other students and industry professionals." />
+        <meta property="og:title" content="Events — Irish Student Managed Fund" />
+        <meta property="og:description" content="Our events are a great way to gain knowledge about finance and network with other students and industry professionals." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Events — Irish Student Managed Fund" />
+        <meta name="twitter:description" content="Our events are a great way to gain knowledge about finance and network with other students and industry professionals." />
       </Helmet>
       <section className="container mx-auto px-4 py-16">
       <h1 className="text-3xl font-bold">Events</h1>

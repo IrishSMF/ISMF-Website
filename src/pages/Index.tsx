@@ -20,6 +20,12 @@ const Index = () => {
       <Helmet>
         <title>Home — Irish Student Managed Fund</title>
         <meta name="description" content="Welcome to the Irish Student Managed Fund, where education meets empowerment. We're on a mission to revolutionise the student experience by providing a unique investment platform tailored for students." />
+        <meta property="og:title" content="Home — Irish Student Managed Fund" />
+        <meta property="og:description" content="Welcome to the Irish Student Managed Fund, where education meets empowerment. We're on a mission to revolutionise the student experience by providing a unique investment platform tailored for students." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Home — Irish Student Managed Fund" />
+        <meta name="twitter:description" content="Welcome to the Irish Student Managed Fund, where education meets empowerment. We're on a mission to revolutionise the student experience by providing a unique investment platform tailored for students." />
       </Helmet>
       <div className="min-h-screen">
 

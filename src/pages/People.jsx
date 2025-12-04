@@ -138,6 +138,12 @@ export default function People() {
       <Helmet>
         <title>People — Irish Student Managed Fund</title>
         <meta name="description" content="Meet the Irish Student Managed Fund leadership committee spanning Equities, Macro, Quant, and Alternatives." />
+        <meta property="og:title" content="People — Irish Student Managed Fund" />
+        <meta property="og:description" content="Meet the Irish Student Managed Fund leadership committee spanning Equities, Macro, Quant, and Alternatives." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="People — Irish Student Managed Fund" />
+        <meta name="twitter:description" content="Meet the Irish Student Managed Fund leadership committee spanning Equities, Macro, Quant, and Alternatives." />
       </Helmet>
       <section className="min-h-screen w-full bg-[#FFFDF5]">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
