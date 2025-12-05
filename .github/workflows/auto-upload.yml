@@ -27,10 +27,11 @@ jobs:
       - name: Commit and push
         run: |
           git config user.name "ISMF Bot"
-          git config user.email "ismfreports@gmail.com"
-          git add public/reports/
-          git commit -m "📄 New macro report: ${{ github.event.issue.title }}"
-          git push
+          git config user.email "irishstudentfund@gmail.com"
+          git pull origin main --rebase  
+          git add public/reports/latest.json
+          git commit -m "📄 Update macro report: ${{ steps.extract.outputs.title }}"
+          git push origin main
           
       - name: Close issue
         run: gh issue close ${{ github.event.issue.number }}
