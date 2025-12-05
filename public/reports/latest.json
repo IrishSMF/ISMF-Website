@@ -1,5 +1,5 @@
 {
-    "title": "ISMF Macro Outlook — November Edition",
-    "date": "2025-11",
-    "file": "2025-11.pdf"
-  }
+  "title": "[MACRO] Test Report",
+  "date": "$(date +%Y-%m)",
+  "file": "$(date +%Y-%m).pdf"
+}
