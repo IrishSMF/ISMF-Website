@@ -1,5 +1,5 @@
 {
-  "title": "[MACRO] Test Report",
+  "title": "[MACRO] test december report",
   "date": "$(date +%Y-%m)",
   "file": "$(date +%Y-%m).pdf"
 }
