@@ -1,5 +1,4 @@
 name: Auto Upload Content
-
 on:
   issues:
     types: [opened, labeled]
@@ -10,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Fetch full history for rebase
       
       - name: Extract PDF from issue
         run: |
@@ -30,7 +31,8 @@ jobs:
           commit_message: "📄 Update macro report: ${{ github.event.issue.title }}"
           file_pattern: "public/reports/latest.json"
           commit_user_name: "ISMF Bot"
-          commit_user_email: "ismfreports@gmail.com"
+          commit_user_email: "irishstudentfund@gmail.com"
+          pull: --rebase --autostash
           
       - name: Close issue
         run: gh issue close ${{ github.event.issue.number }}
@@ -42,6 +44,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       
       - name: Parse event details
         run: |
@@ -49,9 +53,8 @@ jobs:
           # Append to src/data/events.json
           
       - name: Commit and push
-        run: |
-          git config user.name "ISMF Bot"
-          git config user.email "ismfreports@gmail.com"
-          git add src/data/events.json
-          git commit -m "📅 New event: ${{ github.event.issue.title }}"
-          git push
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "📅 New event: ${{ github.event.issue.title }}"
+          file_pattern: "src/data/events.json"
+          commit_user_name: "ISMF Bot"
