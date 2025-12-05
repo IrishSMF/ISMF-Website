@@ -10,29 +10,34 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Fetch full history for rebase
+          ref: main
+          fetch-depth: 0
       
-      - name: Extract PDF from issue
+      - name: Update latest.json and push
         run: |
-          # GitHub Action downloads attachment from issue
-          # Saves to public/reports/YYYY-MM.pdf
+          git config user.name "ISMF Bot"
+          git config user.email "irishstudentfund@gmail.com"
           
-      - name: Update latest.json
-        run: |
+          # Ensure we're on the latest main
+          git fetch origin main
+          git reset --hard origin/main
+          
+          # Create/update the file
+          mkdir -p public/reports
           echo '{
             "title": "${{ github.event.issue.title }}",
             "date": "$(date +%Y-%m)",
             "file": "$(date +%Y-%m).pdf"
           }' > public/reports/latest.json
           
-      - name: Commit and push
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "📄 Update macro report: ${{ github.event.issue.title }}"
-          file_pattern: "public/reports/latest.json"
-          commit_user_name: "ISMF Bot"
-          commit_user_email: "irishstudentfund@gmail.com"
-          pull: --rebase --autostash
+          # Commit and push
+          git add public/reports/latest.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "📄 Update macro report: ${{ github.event.issue.title }}"
+            git push origin main
+          fi
           
       - name: Close issue
         run: gh issue close ${{ github.event.issue.number }}
@@ -45,16 +50,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
+          ref: main
           fetch-depth: 0
       
       - name: Parse event details
         run: |
           # Extract title, date, description from issue body
           # Append to src/data/events.json
-          
-      - name: Commit and push
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "📅 New event: ${{ github.event.issue.title }}"
-          file_pattern: "src/data/events.json"
-          commit_user_name: "ISMF Bot"
+          echo "Event processing not yet implemented"
