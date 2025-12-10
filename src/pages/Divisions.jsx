@@ -13,7 +13,7 @@ const divisions = [
   {
     name: "ALTERNATIVE INVESTMENTS",
     description:
-      "4 Sectors: Private Markets (VC & Private Equity), Commodities, Real Estate, and Digital Assets.",
+      "Focuses on analysing Private Markets (VC & Private Equity), Commodities, Real Estate, and Digital Assets.",
     icon: Briefcase,
   },
   {
