@@ -5,16 +5,22 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const divisions = [
   {
+    name: "EQUITIES",
+    description:
+      "Conducts fundamental analysis, stock selection, and equity portfolio management.",
+    icon: BarChart3,
+  },
+  {
+    name: "ALTERNATIVE INVESTMENTS",
+    description:
+      "4 Sectors: Private Markets (VC & Private Equity), Commodities, Real Estate, and Digital Assets.",
+    icon: Briefcase,
+  },
+  {
     name: "QUANT",
     description:
       "Focused on quantitative modeling, systematic strategies, and data-driven investment decisions.",
     icon: TrendingUp,
-  },
-  {
-    name: "ALTERNATIVE",
-    description:
-      "Covers hedge funds, private equity, venture capital, and other non-traditional assets.",
-    icon: Briefcase,
   },
   {
     name: "TECHNOLOGY",
@@ -29,15 +35,9 @@ const divisions = [
     icon: Megaphone,
   },
   {
-    name: "EQUITIES",
+    name: "MACROECONOMIC RESEARCH",
     description:
-      "Conducts fundamental analysis, stock selection, and equity portfolio management.",
-    icon: BarChart3,
-  },
-  {
-    name: "MACRO",
-    description:
-      "Analyzes macroeconomic trends, monetary policy, and market-wide investment opportunities.",
+      "Analyses macroeconomic trends, monetary policy, and market-wide investment opportunities.",
     icon: Globe,
   },
 ];
