@@ -251,7 +251,6 @@ export function EventsCalendar({ events = defaultEvents, className }: EventsCale
         {/* Spacing: consistent vertical rhythm between Upcoming and Recent Highlights */}
         <div className="space-y-8">
           <Card className="border border-border/60">
-            {/* Spacing: card header padding kept within 16–24px range */}
             <CardHeader className="px-5 pt-5 pb-3">
               <CardTitle className="flex items-center gap-2 text-xl font-semibold text-foreground">
                 <Clock className="h-5 w-5 text-primary" />
@@ -261,16 +260,20 @@ export function EventsCalendar({ events = defaultEvents, className }: EventsCale
                 Confirm your spot and mark your calendar — seats for in-person sessions fill quickly.
               </CardDescription>
             </CardHeader>
-            {/* Spacing: taller stack and more space between upcoming list items */}
-            <CardContent className="space-y-6 px-5 pb-5">
-              {upcomingEvents.length === 0 && (
-                <p className="text-sm text-muted-foreground">
-                  New events are on the way. Check back soon or subscribe to the members’ newsletter.
-                </p>
-              )}
-              {upcomingEvents.map((event) => (
-                <EventDialog key={event.id} event={event} />
-              ))}
+
+            <CardContent className="px-5 pb-5">
+              {/* iframe wrapper follows same visual language as the card content */}
+              <div className="rounded-2xl border border-border/60 bg-background/60 p-4">
+                <iframe
+                  title="Events Calendar"
+                  src="https://luma.com/embed/calendar/cal-10H6yZGRxciSe3l/events"
+                  className="w-full h-[380px] min-h-[240px] rounded-lg border border-border/60 bg-transparent"
+                  frameBorder="0"
+                  allowFullScreen
+                  aria-hidden="false"
+                  tabIndex={0}
+                />
+              </div>
             </CardContent>
           </Card>
 
