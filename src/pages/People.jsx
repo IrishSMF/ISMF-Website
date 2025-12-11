@@ -28,7 +28,7 @@ const teamData = [
         description: "",
         division: "Executive",
         initials: "JC",
-        photo: `${import.meta.env.BASE_URL}team/juliet-carty.png`,
+        photo: `${import.meta.env.BASE_URL}team/juliette-carty.png`,
         linkedin: "https://www.linkedin.com/in/juliette-carty-b325a5270/"
       },
       {
@@ -46,7 +46,7 @@ const teamData = [
         description: "",
         division: "Executive",
         initials: "KA",
-        photo: `${import.meta.env.BASE_URL}team/kahmala-aamir.png`,
+        photo: `${import.meta.env.BASE_URL}team/kashmala-aamir.png`,
         linkedin: "https://www.linkedin.com/in/kashmala1aamir/"
       },
       {
@@ -59,6 +59,15 @@ const teamData = [
         linkedin: "https://www.linkedin.com/in/tanya-jindal-cma-pmp/"
       },
       {
+        name: "Klaudia Ciepiela",
+        role: "Director of Equity Investments",
+        description: "",
+        division: "Equities",
+        initials: "KC",
+        photo: `${import.meta.env.BASE_URL}team/klaudia-ciepiela.png`,
+        linkedin: "https://www.linkedin.com/in/klaudia-ciepiela-1b22a1254/"
+      },
+      {
         name: "Tejal Ramchandani",
         role: "Chief Macroeconomist",
         description: "",
@@ -68,6 +77,24 @@ const teamData = [
         linkedin: "https://www.linkedin.com/in/tejal-ramchandani-599666294/"
       },
       {
+        name: "Jonah Jjemba",
+        role: "Co-Director of Quant",
+        description: "",
+        division: "Quantitative Finance",
+        initials: "JJ",
+        photo: `${import.meta.env.BASE_URL}team/jonah-jjemba.png`,
+        linkedin: "https://www.linkedin.com/in/jonah-jjemba-9042a01b7/"
+      },
+      {
+        name: "Matus Sorocin",
+        role: "Co-Director of Quant",
+        description: "",
+        division: "Quantitative Finance",
+        initials: "MS",
+        photo: `${import.meta.env.BASE_URL}team/matus-sorocin.png`,
+        linkedin: "https://www.linkedin.com/in/matus-sorocin-26ak/"
+      },
+      {
         name: "Can Atasever",
         role: "Chief Technology Officer",
         description: "",
@@ -75,15 +102,6 @@ const teamData = [
         initials: "CA",
         photo: `${import.meta.env.BASE_URL}team/can-atasever.png`,
         linkedin: "https://www.linkedin.com/in/icancode/"
-      },
-      {
-        name: "Klaudia Ciepiela",
-        role: "Director of Equity Investments",
-        description: "",
-        division: "Equities",
-        initials: "KC",
-        photo: `${import.meta.env.BASE_URL}team/klaudia-ciepiela.png`,
-        linkedin: "https://www.linkedin.com/in/klaudia-ciepiela-1b22a1254/"
       },
       {
         name: "Carole Misdari",
@@ -102,24 +120,6 @@ const teamData = [
         initials: "ROS",
         photo: `${import.meta.env.BASE_URL}team/roisin-osullivan-smyth.png`,
         linkedin: "https://www.linkedin.com/in/roisinosullivansmyths/"
-      },
-      {
-        name: "Jonah Jjemba",
-        role: "Co-Director of Quant",
-        description: "",
-        division: "Quantitative Finance",
-        initials: "JJ",
-        photo: `${import.meta.env.BASE_URL}team/jonah-jjemba.png`,
-        linkedin: "https://www.linkedin.com/in/jonah-jjemba-9042a01b7/"
-      },
-      {
-        name: "Matus Sorocin",
-        role: "Co-Director of Quant",
-        description: "",
-        division: "Quantitative Finance",
-        initials: "MS",
-        photo: `${import.meta.env.BASE_URL}team/matus-sorocin.png`,
-        linkedin: "https://www.linkedin.com/in/jonah-jjemba-9042a01b7/"
       },
 ];
 
