@@ -23,9 +23,15 @@ const divisions = [
     icon: TrendingUp,
   },
   {
+    name: "MACROECONOMIC RESEARCH",
+    description:
+      "Analyses macroeconomic trends, monetary policy, and market-wide investment opportunities.",
+    icon: Globe,
+  },
+  {
     name: "TECHNOLOGY",
     description:
-      "Supports the fund's data infrastructure, automation, and software tools to enhance performance.",
+      "Supports the fund's technical infrastructure, automation, and software tools to enhance performance.",
     icon: Code,
   },
   {
@@ -33,12 +39,6 @@ const divisions = [
     description:
       "Manages branding, outreach, event organization, and internal/external communications.",
     icon: Megaphone,
-  },
-  {
-    name: "MACROECONOMIC RESEARCH",
-    description:
-      "Analyses macroeconomic trends, monetary policy, and market-wide investment opportunities.",
-    icon: Globe,
   },
 ];
 
