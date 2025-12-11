@@ -6,7 +6,7 @@ import TeamGrid from "@/components/TeamGrid";
 const teamData = [
      {
         name: "Raj Aryan Upadhyaya",
-        role: "Founder, Co-CEO",
+        role: "Founder & Co-Chief Executive Officer",
         description: "",
         division: "Executive",
         initials: "RAU",
@@ -15,7 +15,7 @@ const teamData = [
       },
       {
         name: "Caius Kauppi",
-        role: "Co-CEO",
+        role: "Co-Chief Executive Officer",
         description: "",
         division: "Executive",
         initials: "CK",
@@ -51,7 +51,7 @@ const teamData = [
       },
       {
         name: "Tanya Jindal",
-        role: "Chief Financial Officer, Director of Alternative Investments",
+        role: "Chief Financial Officer & Director of Alternative Investments",
         description: "",
         division: "Executive",
         initials: "TJ",
