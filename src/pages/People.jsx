@@ -62,7 +62,7 @@ const teamData = [
         name: "Klaudia Ciepiela",
         role: "Director of Equity Investments",
         description: "",
-        division: "Equities",
+        division: "Equity Investments",
         initials: "KC",
         photo: `${import.meta.env.BASE_URL}team/klaudia-ciepiela.png`,
         linkedin: "https://www.linkedin.com/in/klaudia-ciepiela-1b22a1254/"
@@ -107,7 +107,7 @@ const teamData = [
         name: "Carole Misdari",
         role: "Chief Marketing Officer",
         description: "",
-        division: "Marketing",
+        division: "Marketing/Events",
         initials: "CM",
         photo: `${import.meta.env.BASE_URL}team/carole-misdari.png`,
         linkedin: "https://www.linkedin.com/in/carole-misdari-2a7674334/"
@@ -116,7 +116,7 @@ const teamData = [
         name: "Roisin O'Sullivan Smyth",
         role: "Director of Events",
         description: "",
-        division: "Marketing",
+        division: "Marketing/Events",
         initials: "ROS",
         photo: `${import.meta.env.BASE_URL}team/roisin-osullivan-smyth.png`,
         linkedin: "https://www.linkedin.com/in/roisinosullivansmyths/"
