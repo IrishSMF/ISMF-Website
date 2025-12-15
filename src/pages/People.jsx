@@ -51,7 +51,7 @@ const teamData = [
       },
       {
         name: "Tanya Jindal",
-        role: "Chief Financial Officer & Director of Alternative Investments",
+        role: "Chief Financial Officer",
         description: "",
         division: "Executive",
         initials: "TJ",
