@@ -71,7 +71,7 @@ const teamData = [
         name: "Tejal Ramchandani",
         role: "Chief Macroeconomist",
         description: "",
-        division: "Macro Research",
+        division: "Macroeconomic Research",
         initials: "TR",
         photo: `${import.meta.env.BASE_URL}team/tejal-ramchandani.png`,
         linkedin: "https://www.linkedin.com/in/tejal-ramchandani-599666294/"
