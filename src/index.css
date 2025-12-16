@@ -1,3 +1,6 @@
+/* Import professional fonts (Inter for body, Merriweather for headings) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Merriweather:wght@400;700&display=swap');
+
 /* Import custom color palette */
 @import './styles/colors.css';
 
@@ -116,8 +119,22 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
-    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    @apply bg-background text-foreground font-sans;
+    /* Use Inter (defined in tailwind config) as the primary UI font for a clean, professional look */
+    font-feature-settings: "cv01" 1;
+  }
+
+  /* Headings: serif for a more institutional/authoritative tone */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Merriweather, Georgia, 'Times New Roman', serif;
+    color: hsl(var(--foreground));
+    font-weight: 700;
+    line-height: 1.15;
+  }
+
+  /* Slightly increase body text weight for legibility on corporate sites */
+  p, li, span, a, button, input, label {
+    font-weight: 400;
   }
 }
 

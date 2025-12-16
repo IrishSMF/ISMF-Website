@@ -13,6 +13,11 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        // Inter for UI / body text, Merriweather for headings
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial'],
+        serif: ['Merriweather', 'Georgia', 'Times New Roman', 'serif'],
+      },
       colors: {
         // New color palette
         ivory: '#FFFCF2',

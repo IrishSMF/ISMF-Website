@@ -62,7 +62,7 @@ const teamData = [
         name: "Klaudia Ciepiela",
         role: "Director of Equity Investments",
         description: "",
-        division: "Equity Investments",
+        division: "Equities",
         initials: "KC",
         photo: `${import.meta.env.BASE_URL}team/klaudia-ciepiela.png`,
         linkedin: "https://www.linkedin.com/in/klaudia-ciepiela-1b22a1254/"
