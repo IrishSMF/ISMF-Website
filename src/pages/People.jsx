@@ -50,15 +50,6 @@ const teamData = [
         linkedin: "https://www.linkedin.com/in/kashmala1aamir/"
       },
       {
-        name: "Tanya Jindal",
-        role: "Chief Financial Officer",
-        description: "",
-        division: "Executive",
-        initials: "TJ",
-        photo: `${import.meta.env.BASE_URL}team/tanya-jindal.png`,
-        linkedin: "https://www.linkedin.com/in/tanya-jindal-cma-pmp/"
-      },
-      {
         name: "Klaudia Ciepiela",
         role: "Director of Equity Investments",
         description: "",
