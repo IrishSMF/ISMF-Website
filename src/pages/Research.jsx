@@ -99,25 +99,39 @@ export default function Research() {
               committee is thinking about markets today.
             </p>
 
-            <div className="bg-[#F3F4F6] rounded-xl p-4 border border-[#E2E8F0] flex items-start gap-3">
-                <a
-                    href={`${import.meta.env.BASE_URL}reports/ismf-macro-report-nov.pdf`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <FileText className="w-6 h-6 text-[#26437E]" />
-                    <div>
-                      <p className="text-sm font-semibold text-[#0A0A0A]">
-                        ISMF Macro Outlook — November Edition
-                      </p>
-    
-                      <p className="text-xs text-[#4A4A4A] mt-1 leading-relaxed">
-                      A concise overview of the macro environment, market themes,
-                      and our current positioning.
-                      </p>
-                    </div>
-                </a>
-            
+            <div className="space-y-4">
+              <a
+                href={`${import.meta.env.BASE_URL}reports/macro-report-jan26.pdf`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-[#F3F4F6] rounded-xl p-4 border border-[#E2E8F0] flex items-start gap-3 hover:border-[#26437E]/40 transition-colors"
+              >
+                <FileText className="w-6 h-6 text-[#26437E] flex-shrink-0" />
+                <div>
+                  <p className="text-sm font-semibold text-[#0A0A0A]">
+                    ISMF Macro Outlook — January Edition
+                  </p>
+                  <p className="text-xs text-[#4A4A4A] mt-1 leading-relaxed">
+                    Macro environment, market themes, and current positioning for January 2026.
+                  </p>
+                </div>
+              </a>
+              <a
+                href={`${import.meta.env.BASE_URL}reports/ismf-macro-report-nov.pdf`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-[#F3F4F6] rounded-xl p-4 border border-[#E2E8F0] flex items-start gap-3 hover:border-[#26437E]/40 transition-colors"
+              >
+                <FileText className="w-6 h-6 text-[#26437E] flex-shrink-0" />
+                <div>
+                  <p className="text-sm font-semibold text-[#0A0A0A]">
+                    ISMF Macro Outlook — November Edition
+                  </p>
+                  <p className="text-xs text-[#4A4A4A] mt-1 leading-relaxed">
+                    A concise overview of the macro environment, market themes, and our current positioning.
+                  </p>
+                </div>
+              </a>
             </div>
           </div>
 
