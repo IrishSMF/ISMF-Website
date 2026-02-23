@@ -50,15 +50,6 @@ const teamData = [
         linkedin: "https://www.linkedin.com/in/kashmala1aamir/"
       },
       {
-        name: "Tanya Jindal",
-        role: "Chief Financial Officer",
-        description: "",
-        division: "Executive",
-        initials: "TJ",
-        photo: `${import.meta.env.BASE_URL}team/tanya-jindal.png`,
-        linkedin: "https://www.linkedin.com/in/tanya-jindal-cma-pmp/"
-      },
-      {
         name: "Klaudia Ciepiela",
         role: "Director of Equity Investments",
         description: "",
@@ -95,13 +86,13 @@ const teamData = [
         linkedin: "https://www.linkedin.com/in/matus-sorocin-26ak/"
       },
       {
-        name: "Can Atasever",
+        name: "Mony Aramalla",
         role: "Chief Technology Officer",
         description: "",
         division: "Technology",
-        initials: "CA",
-        photo: `${import.meta.env.BASE_URL}team/can-atasever.png`,
-        linkedin: "https://www.linkedin.com/in/icancode/"
+        initials: "MA",
+        photo: `${import.meta.env.BASE_URL}team/mony-aramalla.png`,
+        linkedin: "https://www.linkedin.com/in/mony-aramalla/"
       },
       {
         name: "Carole Misdari",
