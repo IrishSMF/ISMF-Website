@@ -3,14 +3,12 @@ import { useMemo, useState } from "react";
 import {
   addDays,
   addMinutes,
-  addMonths,
   eachDayOfInterval,
   format,
   isBefore,
   isSameDay,
   startOfDay,
   startOfToday,
-  set,
 } from "date-fns";
 import { ArrowUpRight, CalendarCheck2, CalendarDays, Clock, ExternalLink, MapPin } from "lucide-react";
 
@@ -54,6 +52,8 @@ export type CalendarEvent = {
   category: EventCategory;
   mode?: DeliveryMode;
   registrationUrl?: string;
+  slidesUrl?: string;
+  slidesCredit?: string;
 };
 
 type HydratedEvent = CalendarEvent & {
@@ -67,6 +67,63 @@ export interface EventsCalendarProps {
 }
 
 const defaultEvents: CalendarEvent[] = [
+  {
+    id: "market-movements-mar-2026",
+    title: "Monthly Market Movements Meeting",
+    description:
+      "Monthly committee touchpoint reviewing macro catalysts, cross-asset moves, and positioning updates across the fund.",
+    start: "2026-03-02T19:00:00.000Z",
+    end: "2026-03-02T20:00:00.000Z",
+    location: "Online — link provided to registered attendees",
+    category: "Briefing",
+    mode: "Virtual",
+  },
+  {
+    id: "venture-capital-webinar-2026-02-18",
+    title: "Venture Capital Webinar",
+    description:
+      "Join us online for an insights session on venture capital, hosted by the Irish Student Managed Fund.",
+    start: "2026-02-18T18:00:00.000Z",
+    end: "2026-02-18T19:00:00.000Z",
+    location: "Online — link provided to registered attendees",
+    category: "Workshop",
+    mode: "Virtual",
+    slidesUrl: "reports/venture-capital-webinar-feb-2026-slides.pdf",
+    slidesCredit: "Giuliano Sansone, Assistant Prof @ UCD",
+  },
+  {
+    id: "stock-pitching-competition-2026-01-30",
+    title: "The National Stage of Stock Pitching Competition",
+    description:
+      "The national stage of the Stock Pitching Competition, hosted by the Irish Student Managed Fund.",
+    start: "2026-01-30T17:00:00.000Z",
+    end: "2026-01-30T19:00:00.000Z",
+    location: "In person — venue details provided to participants",
+    category: "Competition",
+    mode: "In person",
+  },
+  {
+    id: "monthly-market-meeting-2026-01-26",
+    title: "Monthly Market Meeting",
+    description:
+      "Monthly committee touchpoint reviewing macro catalysts, cross-asset moves, and positioning updates across the fund.",
+    start: "2026-01-26T19:00:00.000Z",
+    end: "2026-01-26T20:00:00.000Z",
+    location: "Online — link provided to registered attendees",
+    category: "Briefing",
+    mode: "Virtual",
+  },
+  {
+    id: "future-of-money-2025-11-26",
+    title: "Join The Future of Money",
+    description:
+      "An evening on the future of money, hosted with Gnosis, Irish Student Managed Fund, and partners at Kennedy's Pub & Restaurant.",
+    start: "2025-11-26T18:00:00.000Z",
+    end: "2025-11-26T20:00:00.000Z",
+    location: "Kennedy's Pub & Restaurant",
+    category: "Networking",
+    mode: "In person",
+  },
   {
     id: "cfa-info-session-2025-10-29",
     title: "CFA Society Ireland Info Session",
@@ -86,27 +143,6 @@ const modeColorMap: Record<DeliveryMode, string> = {
   Hybrid: "bg-sky-100 text-sky-700 dark:bg-sky-500/10 dark:text-sky-300",
   Virtual: "bg-violet-100 text-violet-700 dark:bg-violet-500/10 dark:text-violet-300",
 };
-
-function createMarketMovementMeetings(firstOccurrence: Date, occurrences = 4): CalendarEvent[] {
-  const initialStart = set(firstOccurrence, { hours: 18, minutes: 0, seconds: 0, milliseconds: 0 });
-
-  return Array.from({ length: occurrences }, (_, index) => {
-    const occurrenceStart = addMonths(initialStart, index);
-    const occurrenceEnd = addMinutes(occurrenceStart, 60);
-
-    return {
-      id: `market-movement-${format(occurrenceStart, "yyyy-MM-dd")}`,
-      title: "Market Movement Meeting",
-      description:
-        "Monthly committee touchpoint reviewing macro catalysts, cross-asset moves, and positioning updates across the fund.",
-      start: occurrenceStart.toISOString(),
-      end: occurrenceEnd.toISOString(),
-      location: "Online - Link provided to registered attendees",
-      category: "Briefing",
-      mode: "Virtual",
-    };
-  });
-}
 
 function hydrateEvents(events: CalendarEvent[]): HydratedEvent[] {
   return events
@@ -133,17 +169,7 @@ function getCalendarModifiers(events: HydratedEvent[]) {
 
 export function EventsCalendar({ events = defaultEvents, className }: EventsCalendarProps) {
   const today = startOfToday();
-  const marketMovementMeetings = useMemo(
-    // Market Movement meetings: first occurrence fixed on 17th November 2025, repeating monthly thereafter.
-    // This ensures the 17th November meeting appears as a past event while later ones appear as upcoming.
-    () => createMarketMovementMeetings(new Date("2025-11-17T00:00:00.000Z")),
-    [],
-  );
-  const mergedEvents = useMemo(() => {
-    const hasRecurringMeetings = events.some((event) => event.id.startsWith("market-movement-"));
-    return hasRecurringMeetings ? events : [...events, ...marketMovementMeetings];
-  }, [events, marketMovementMeetings]);
-  const hydratedEvents = useMemo(() => hydrateEvents(mergedEvents), [mergedEvents]);
+  const hydratedEvents = useMemo(() => hydrateEvents(events), [events]);
 
   const [selectedDate, setSelectedDate] = useState<Date>(() => {
     const nextUpcoming = hydratedEvents.find((event) => !isBefore(event.startDate, today));
@@ -380,6 +406,24 @@ function EventDialog({ event }: { event: HydratedEvent }) {
             </a>
           </Button>
         ) : null}
+        {event.slidesUrl ? (
+          <div className="space-y-1">
+            <Button asChild variant="outline" className="w-full">
+              <a
+                href={`${import.meta.env.BASE_URL}${event.slidesUrl}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2"
+              >
+                <ExternalLink className="h-4 w-4" />
+                View slides (PDF)
+              </a>
+            </Button>
+            {event.slidesCredit ? (
+              <p className="text-xs text-muted-foreground text-center">Slides: {event.slidesCredit}</p>
+            ) : null}
+          </div>
+        ) : null}
       </DialogContent>
     </Dialog>
   );
@@ -427,6 +471,22 @@ function EventListItem({
             </>
           ) : null}
         </div>
+        {event.slidesUrl ? (
+          <div className="flex flex-col gap-1 pt-1 border-t border-border/60">
+            <a
+              href={`${import.meta.env.BASE_URL}${event.slidesUrl}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-primary hover:underline inline-flex items-center gap-1.5"
+            >
+              <ExternalLink className="h-3.5 w-3.5" />
+              View slides (PDF)
+            </a>
+            {event.slidesCredit ? (
+              <p className="text-xs text-muted-foreground">Slides: {event.slidesCredit}</p>
+            ) : null}
+          </div>
+        ) : null}
       </div>
     </div>
   );
