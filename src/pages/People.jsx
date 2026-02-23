@@ -50,13 +50,13 @@ const teamData = [
         linkedin: "https://www.linkedin.com/in/kashmala1aamir/"
       },
       {
-        name: "Klaudia Ciepiela",
+        name: "Merlin Girard Razel",
         role: "Director of Equity Investments",
         description: "",
         division: "Equities",
-        initials: "KC",
-        photo: `${import.meta.env.BASE_URL}team/klaudia-ciepiela.png`,
-        linkedin: "https://www.linkedin.com/in/klaudia-ciepiela-1b22a1254/"
+        initials: "MGR",
+        photo: "",
+        linkedin: "https://www.linkedin.com/in/merlin-girard-razel-b300a0259/"
       },
       {
         name: "Tejal Ramchandani",
