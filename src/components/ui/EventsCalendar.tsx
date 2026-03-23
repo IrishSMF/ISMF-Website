@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useMemo, useState } from "react";
+
 import {
   addDays,
   addMinutes,
@@ -10,6 +11,8 @@ import {
   startOfDay,
   startOfToday,
 } from "date-fns";
+
+import data from '../../data/events.json'
 import { ArrowUpRight, CalendarCheck2, CalendarDays, Clock, ExternalLink, MapPin } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -66,77 +69,77 @@ export interface EventsCalendarProps {
   className?: string;
 }
 
-const defaultEvents: CalendarEvent[] = [
-  {
-    id: "market-movements-mar-2026",
-    title: "Monthly Market Movements Meeting",
-    description:
-      "Monthly committee touchpoint reviewing macro catalysts, cross-asset moves, and positioning updates across the fund.",
-    start: "2026-03-02T19:00:00.000Z",
-    end: "2026-03-02T20:00:00.000Z",
-    location: "Online — link provided to registered attendees",
-    category: "Briefing",
-    mode: "Virtual",
-  },
-  {
-    id: "venture-capital-webinar-2026-02-18",
-    title: "Venture Capital Webinar",
-    description:
-      "Join us online for an insights session on venture capital, hosted by the Irish Student Managed Fund.",
-    start: "2026-02-18T18:00:00.000Z",
-    end: "2026-02-18T19:00:00.000Z",
-    location: "Online — link provided to registered attendees",
-    category: "Workshop",
-    mode: "Virtual",
-    slidesUrl: "reports/venture-capital-webinar-feb-2026-slides.pdf",
-    slidesCredit: "Giuliano Sansone, Assistant Prof @ UCD",
-  },
-  {
-    id: "stock-pitching-competition-2026-01-30",
-    title: "The National Stage of Stock Pitching Competition",
-    description:
-      "The national stage of the Stock Pitching Competition, hosted by the Irish Student Managed Fund.",
-    start: "2026-01-30T17:00:00.000Z",
-    end: "2026-01-30T19:00:00.000Z",
-    location: "In person — venue details provided to participants",
-    category: "Competition",
-    mode: "In person",
-  },
-  {
-    id: "monthly-market-meeting-2026-01-26",
-    title: "Monthly Market Meeting",
-    description:
-      "Monthly committee touchpoint reviewing macro catalysts, cross-asset moves, and positioning updates across the fund.",
-    start: "2026-01-26T19:00:00.000Z",
-    end: "2026-01-26T20:00:00.000Z",
-    location: "Online — link provided to registered attendees",
-    category: "Briefing",
-    mode: "Virtual",
-  },
-  {
-    id: "future-of-money-2025-11-26",
-    title: "Join The Future of Money",
-    description:
-      "An evening on the future of money, hosted with Gnosis, Irish Student Managed Fund, and partners at Kennedy's Pub & Restaurant.",
-    start: "2025-11-26T18:00:00.000Z",
-    end: "2025-11-26T20:00:00.000Z",
-    location: "Kennedy's Pub & Restaurant",
-    category: "Networking",
-    mode: "In person",
-  },
-  {
-    id: "cfa-info-session-2025-10-29",
-    title: "CFA Society Ireland Info Session",
-    description:
-      "Members from CFA Society Ireland shared what the CFA qualification entails, how to navigate the pathway, and the career opportunities it can unlock. Hosted in collaboration with the University of Galway Student Managed Fund and Ulster University’s SMF.",
-    start: "2025-10-29T17:30:00.000Z",
-    end: "2025-10-29T18:30:00.000Z",
-    location: "Online — link provided to registered attendees",
-    category: "Briefing",
-    mode: "Virtual",
-    registrationUrl: "https://lnkd.in/eDHRSFGn",
-  },
-];
+const defaultEvents: CalendarEvent[] = data //[
+//   {
+//     id: "market-movements-mar-2026",
+//     title: "Monthly Market Movements Meeting",
+//     description:
+//       "Monthly committee touchpoint reviewing macro catalysts, cross-asset moves, and positioning updates across the fund.",
+//     start: "2026-03-02T19:00:00.000Z",
+//     end: "2026-03-02T20:00:00.000Z",
+//     location: "Online — link provided to registered attendees",
+//     category: "Briefing",
+//     mode: "Virtual",
+//   },
+//   {
+//     id: "venture-capital-webinar-2026-02-18",
+//     title: "Venture Capital Webinar",
+//     description:
+//       "Join us online for an insights session on venture capital, hosted by the Irish Student Managed Fund.",
+//     start: "2026-02-18T18:00:00.000Z",
+//     end: "2026-02-18T19:00:00.000Z",
+//     location: "Online — link provided to registered attendees",
+//     category: "Workshop",
+//     mode: "Virtual",
+//     slidesUrl: "reports/venture-capital-webinar-feb-2026-slides.pdf",
+//     slidesCredit: "Giuliano Sansone, Assistant Prof @ UCD",
+//   },
+//   {
+//     id: "stock-pitching-competition-2026-01-30",
+//     title: "The National Stage of Stock Pitching Competition",
+//     description:
+//       "The national stage of the Stock Pitching Competition, hosted by the Irish Student Managed Fund.",
+//     start: "2026-01-30T17:00:00.000Z",
+//     end: "2026-01-30T19:00:00.000Z",
+//     location: "In person — venue details provided to participants",
+//     category: "Competition",
+//     mode: "In person",
+//   },
+//   {
+//     id: "monthly-market-meeting-2026-01-26",
+//     title: "Monthly Market Meeting",
+//     description:
+//       "Monthly committee touchpoint reviewing macro catalysts, cross-asset moves, and positioning updates across the fund.",
+//     start: "2026-01-26T19:00:00.000Z",
+//     end: "2026-01-26T20:00:00.000Z",
+//     location: "Online — link provided to registered attendees",
+//     category: "Briefing",
+//     mode: "Virtual",
+//   },
+//   {
+//     id: "future-of-money-2025-11-26",
+//     title: "Join The Future of Money",
+//     description:
+//       "An evening on the future of money, hosted with Gnosis, Irish Student Managed Fund, and partners at Kennedy's Pub & Restaurant.",
+//     start: "2025-11-26T18:00:00.000Z",
+//     end: "2025-11-26T20:00:00.000Z",
+//     location: "Kennedy's Pub & Restaurant",
+//     category: "Networking",
+//     mode: "In person",
+//   },
+//   {
+//     id: "cfa-info-session-2025-10-29",
+//     title: "CFA Society Ireland Info Session",
+//     description:
+//       "Members from CFA Society Ireland shared what the CFA qualification entails, how to navigate the pathway, and the career opportunities it can unlock. Hosted in collaboration with the University of Galway Student Managed Fund and Ulster University’s SMF.",
+//     start: "2025-10-29T17:30:00.000Z",
+//     end: "2025-10-29T18:30:00.000Z",
+//     location: "Online — link provided to registered attendees",
+//     category: "Briefing",
+//     mode: "Virtual",
+//     registrationUrl: "https://lnkd.in/eDHRSFGn",
+//   },
+// ];
 
 const modeColorMap: Record<DeliveryMode, string> = {
   "In person": "bg-emerald-100 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300",
