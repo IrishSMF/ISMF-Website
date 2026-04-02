@@ -35,9 +35,8 @@ const divisions: Division[] = [
   },
   { 
     id: 'technology', 
-    name: 'Technology Development', 
-    isOpen: true,
-    formUrl: 'https://forms.gle/gMjy274VkhjAE9x26'
+    name: 'Technology Development (Closed)', 
+    isOpen: false
   },
 ];
 
@@ -115,6 +114,14 @@ export const ApplyNowModal: React.FC<ApplyNowModalProps> = ({ isOpen, onClose })
               {/* Content */}
               <div className="p-6">
                 <div className="space-y-3">
+                  <a
+                    href="https://forms.gle/DtDThwoGjxPJQiwUA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex w-full items-center justify-between rounded-xl border-2 border-[#26437E] bg-white p-4 text-left transition-all duration-200 hover:bg-[#EAF0FB]"
+                  >
+                    <span className="font-semibold text-[#26437E]">Executive applications</span>
+                  </a>
                   {divisions.map((division) => (
                     <motion.button
                       key={division.id}
