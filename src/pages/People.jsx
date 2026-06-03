@@ -7,110 +7,128 @@ const teamData = [
      {
         name: "Raj Aryan Upadhyaya",
         role: "Founder & Co-Chief Executive Officer",
-        description: "",
+        description: "TCD Computer Science & Economics '27",
         division: "Executive",
         initials: "RAU",
         photo: `${import.meta.env.BASE_URL}team/raj-aryan-upadhyaya.png`,
         linkedin: "https://www.linkedin.com/in/raupadhyaya04/"
       },
       {
+        name: "Rory Brennan",
+        role: "Co-Chief Executive Officer & Co-Director of Quantitative Finance",
+        description: "UCC BComm Banking & Finance '27",
+        division: "Executive",
+        initials: "RB",
+        photo: `${import.meta.env.BASE_URL}team/rory-brennan.png`,
+        linkedin: "https://www.linkedin.com/in/rory-brennan-28b551230/"
+      },
+      {
         name: "Caius Kauppi",
-        role: "Co-Chief Executive Officer",
-        description: "",
+        role: "Chairperson",
+        description: "Imperial MSc Finance & Accounting 2027 (Prev. UCD)",
         division: "Executive",
         initials: "CK",
         photo: `${import.meta.env.BASE_URL}team/caius-kauppi.png`,
         linkedin: "https://www.linkedin.com/in/caiuskauppi/"
       },
       {
-        name: "Juliette Carty",
-        role: "Chairperson",
-        description: "",
-        division: "Executive",
-        initials: "JC",
-        photo: `${import.meta.env.BASE_URL}team/juliette-carty.png`,
-        linkedin: "https://www.linkedin.com/in/juliette-carty-b325a5270/"
-      },
-      {
         name: "Krutika Dwivedi",
         role: "Chairperson",
-        description: "",
+        description: "UCD Commerce '27",
         division: "Executive",
         initials: "KD",
         photo: `${import.meta.env.BASE_URL}team/krutika-dwivedi.png`,
         linkedin: "https://www.linkedin.com/in/krutika-dwivedi/"
       },
       {
-        name: "Kashmala Aamir",
+        name: "Vacant",
         role: "Chief Operations Officer",
         description: "",
         division: "Executive",
-        initials: "KA",
-        photo: `${import.meta.env.BASE_URL}team/kashmala-aamir.png`,
-        linkedin: "https://www.linkedin.com/in/kashmala1aamir/"
+        initials: "U",
+        photo: `${import.meta.env.BASE_URL}team/vacant.png`,
+        linkedin: ""
       },
       {
-        name: "Merlin Girard Razel",
+        name: "Tobi Jakande",
+        role: "Chief Financial Officer",
+        description: "Maynooth University Finance '27",
+        division: "Executive",
+        initials: "TJ",
+        photo: `${import.meta.env.BASE_URL}team/tobi-jakande.png`,
+        linkedin: "https://www.linkedin.com/in/tobi-jakande/"
+      },
+      {
+        name: "George Cussen",
         role: "Director of Equity Investments",
-        description: "",
+        description: "UCC Finance '29",
         division: "Equities",
-        initials: "MGR",
-        photo: "",
-        linkedin: "https://www.linkedin.com/in/merlin-girard-razel-b300a0259/"
+        initials: "GC",
+        photo: `${import.meta.env.BASE_URL}team/george-cussen.png`,
+        linkedin: "https://www.linkedin.com/in/georgecussen/"
       },
       {
-        name: "Tejal Ramchandani",
-        role: "Chief Macroeconomist",
-        description: "",
+        name: "Cillian Lloyd",
+        role: "Director of Macroeconomic Research",
+        description: "UCC Finance '28",
         division: "Macroeconomic Research",
         initials: "TR",
-        photo: `${import.meta.env.BASE_URL}team/tejal-ramchandani.png`,
-        linkedin: "https://www.linkedin.com/in/tejal-ramchandani-599666294/"
+        photo: `${import.meta.env.BASE_URL}team/cillian-lloyd.png`,
+        linkedin: "https://www.linkedin.com/in/cillian-lloyd-0b3412301/"
       },
       {
-        name: "Jonah Jjemba",
+        name: "Ben Sweeney O'Brien",
+        role: "Director of Alternative Investments",
+        description: "UCD Economics & Geography '27",
+        division: "Alternative Investments",
+        initials: "BSOB",
+        photo: `${import.meta.env.BASE_URL}team/ben-sweeney-obrien.png`,
+        linkedin: "https://www.linkedin.com/in/bensweeneyobrien/"
+      },
+      {
+        name: "Vacant",
         role: "Co-Director of Quant",
         description: "",
         division: "Quantitative Finance",
-        initials: "JJ",
-        photo: `${import.meta.env.BASE_URL}team/jonah-jjemba.png`,
-        linkedin: "https://www.linkedin.com/in/jonah-jjemba-9042a01b7/"
-      },
-      {
-        name: "Matus Sorocin",
-        role: "Co-Director of Quant",
-        description: "",
-        division: "Quantitative Finance",
-        initials: "MS",
-        photo: `${import.meta.env.BASE_URL}team/matus-sorocin.png`,
-        linkedin: "https://www.linkedin.com/in/matus-sorocin-26ak/"
+        initials: "U",
+        photo: `${import.meta.env.BASE_URL}team/vacant.png`,
+        linkedin: ""
       },
       {
         name: "Mony Aramalla",
-        role: "Chief Technology Officer",
-        description: "",
+        role: "Director of Technology",
+        description: "UCD MSc Mechanical Engineering (integrated) '28",
         division: "Technology",
         initials: "MA",
         photo: `${import.meta.env.BASE_URL}team/mony-aramalla.png`,
         linkedin: "https://www.linkedin.com/in/mony-aramalla/"
       },
       {
-        name: "Carole Misdari",
-        role: "Chief Marketing Officer",
-        description: "",
-        division: "Marketing/Events",
-        initials: "CM",
-        photo: `${import.meta.env.BASE_URL}team/carole-misdari.png`,
-        linkedin: "https://www.linkedin.com/in/carole-misdari-2a7674334/"
+        name: "Erika O'Callaghan",
+        role: "Director of Marketing",
+        description: "UCD Commerce '27",
+        division: "Marketing",
+        initials: "EO'C",
+        photo: `${import.meta.env.BASE_URL}team/erika-ocallaghan.png`,
+        linkedin: "https://www.linkedin.com/in/erikaocallaghan/"
       },
       {
-        name: "Roisin O'Sullivan Smyth",
-        role: "Director of Events",
-        description: "",
-        division: "Marketing/Events",
-        initials: "ROS",
-        photo: `${import.meta.env.BASE_URL}team/roisin-osullivan-smyth.png`,
-        linkedin: "https://www.linkedin.com/in/roisinosullivansmyths/"
+        name: "Patrick Ryan",
+        role: "Investment Officer",
+        description: "UCD Economics & Statistics '29",
+        division: "Committee",
+        initials: "PR",
+        photo: `${import.meta.env.BASE_URL}team/patrick-ryan.png`,
+        linkedin: "https://www.linkedin.com/in/patrick-ryan-ucd/"
+      },
+      {
+        name: "Ana Silva",
+        role: "Investment Officer",
+        description: "UCD Economics & Finance '29",
+        division: "Committee",
+        initials: "AS",
+        photo: `${import.meta.env.BASE_URL}team/ana-silva.png`,
+        linkedin: "https://www.linkedin.com/in/ana-silva-4324022b9"
       },
 ];
 
