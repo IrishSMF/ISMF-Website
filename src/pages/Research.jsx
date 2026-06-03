@@ -43,63 +43,39 @@ export default function Research() {
 
           <p className="text-lg text-[#3A3A3A] max-w-3xl leading-relaxed">
             At the Irish Student Managed Fund, research underpins every investment
-            decision. Our Macro Research Team publishes a{" "}
-            <span className="font-semibold">bi-monthly macro outlook</span>,
-            combining top-down analysis of growth, inflation and central bank
-            policy with bottom-up views across sectors and asset classes.
+            decision. Our teams publish a{" "}
+            <span className="font-semibold">bi-monthly macro outlook</span> and
+            sector-focused{" "}
+            <span className="font-semibold">commodities newsletters</span>, and
+            in-depth{" "}
+            <span className="font-semibold">country case studies</span>, and
+            educational{" "}
+            <span className="font-semibold">member guides</span>,
+            combining top-down macro analysis with bottom-up views across asset
+            classes and physical markets.
           </p>
 
           <p className="text-lg text-[#3A3A3A] max-w-3xl leading-relaxed">
-            These reports guide our portfolio positioning across equities, macro
-            and alternatives, and help our members develop a deeper understanding
-            of the forces shaping global markets.
+            These publications guide our portfolio positioning and help members
+            develop a deeper understanding of the forces shaping global markets.
           </p>
         </div>
       </section>
 
-      {/* Content sections */}
-      <section className="max-w-5xl mx-auto px-6 pb-20 grid gap-8 md:grid-cols-[1.8fr,1.4fr]">
-        {/* Bi-monthly macro publication card */}
+      <div className="max-w-5xl mx-auto px-6 pb-20">
+      {/* Macro outlook */}
+      <section className="pt-12">
         <div className="bg-white rounded-2xl shadow-md p-6 sm:p-8 border border-[#E2E8F0]">
-         
-
-          <h2 className="text-2xl font-semibold mb-3 text-[#0A0A0A]">
+          <h2 className="text-xl font-semibold mb-3 text-[#0A0A0A]">
             Bi-Monthly Macro Outlook
           </h2>
-
-          <p className="text-sm sm:text-base text-[#4A4A4A] leading-relaxed">
+          <p className="text-sm sm:text-base text-[#4A4A4A] mb-6 leading-relaxed">
             Every two months, the ISMF Macro Research Team publishes a
-            comprehensive update on the global economy and financial markets.
-            Each edition covers:
+            student-written update on the global economy—covering growth,
+            inflation, policy, market themes, and portfolio positioning.
           </p>
 
-          <ul className="mt-4 space-y-2 text-sm sm:text-base text-[#3A3A3A]">
-            <li>• Growth, inflation and central bank policy trends</li>
-            <li>• Key themes across equities, fixed income and FX</li>
-            <li>• Scenario analysis and risks to the outlook</li>
-            <li>• Implications for ISMF portfolios and positioning</li>
-          </ul>
-
-          <p className="mt-4 text-sm text-[#4A4A4A] leading-relaxed">
-            The publication is written by students for students, aiming to make
-            macroeconomics accessible while maintaining a rigorous,
-            data-informed approach.
-          </p>
-        </div>
-
-        {/* Latest insights card */}
-        <div className="bg-white rounded-2xl m-10px shadow-md p-6 sm:p-7 border border-[#E2E8F0]  flex flex-col justify-between mb-4">
-          <div>
-            <h3 className="text-xl font-semibold mb-2 text-[#0A0A0A]">
-              See our latest insights
-            </h3>
-
-            <p className="text-sm sm:text-base text-[#4A4A4A] mb-4 leading-relaxed">
-              Explore our most recent macro outlook and see how the ISMF
-              committee is thinking about markets today.
-            </p>
-
-            <div className="space-y-4">
+          <div className="space-y-4">
               <a
                 href={`${import.meta.env.BASE_URL}reports/macro-report-jan26.pdf`}
                 target="_blank"
@@ -132,11 +108,125 @@ export default function Research() {
                   </p>
                 </div>
               </a>
-            </div>
           </div>
-
         </div>
       </section>
+
+      {/* Commodities newsletter */}
+      <section className="pt-32 border-t border-[#E2E8F0]">
+        <div className="bg-white rounded-2xl shadow-md p-6 sm:p-8 border border-[#E2E8F0]">
+          <h2 className="text-xl font-semibold mb-3 text-[#0A0A0A]">
+            Commodities Newsletter
+          </h2>
+          <p className="text-sm sm:text-base text-[#4A4A4A] mb-6 leading-relaxed">
+            Bi-weekly updates from the ISMF Commodities Research Team on energy,
+            metals, and commodity markets—covering supply, demand, geopolitics, and
+            portfolio implications.
+          </p>
+
+          <div className="space-y-4">
+            <a
+              href={`${import.meta.env.BASE_URL}reports/commodities-newsletter-2.pdf`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block bg-[#F3F4F6] rounded-xl p-4 border border-[#E2E8F0] flex items-start gap-3 hover:border-[#26437E]/40 transition-colors"
+            >
+              <FileText className="w-6 h-6 text-[#26437E] flex-shrink-0" />
+              <div>
+                <p className="text-sm font-semibold text-[#0A0A0A]">
+                  ISMF Commodities Newsletter — Edition 2
+                </p>
+                <p className="text-xs text-[#4A4A4A] mt-1 leading-relaxed">
+                  How shipping paralysis and Hormuz disruption are rewiring energy, logistics, and aluminium markets.
+                </p>
+              </div>
+            </a>
+            <a
+              href={`${import.meta.env.BASE_URL}reports/commodities-newsletter-1.pdf`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block bg-[#F3F4F6] rounded-xl p-4 border border-[#E2E8F0] flex items-start gap-3 hover:border-[#26437E]/40 transition-colors"
+            >
+              <FileText className="w-6 h-6 text-[#26437E] flex-shrink-0" />
+              <div>
+                <p className="text-sm font-semibold text-[#0A0A0A]">
+                  ISMF Commodities Newsletter — Edition 1
+                </p>
+                <p className="text-xs text-[#4A4A4A] mt-1 leading-relaxed">
+                  Oil market dynamics, silver positioning, and key drivers across energy and precious metals.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Case studies */}
+      <section className="pt-32 border-t border-[#E2E8F0]">
+        <div className="bg-white rounded-2xl shadow-md p-6 sm:p-8 border border-[#E2E8F0]">
+          <h2 className="text-xl font-semibold mb-3 text-[#0A0A0A]">
+            Case Studies
+          </h2>
+          <p className="text-sm sm:text-base text-[#4A4A4A] mb-6 leading-relaxed">
+            Deep-dive studies from the ISMF Macroeconomic Research Team on
+            individual economies—tracing historical context, debt dynamics,
+            inflation, and policy constraints.
+          </p>
+
+          <div className="space-y-4">
+            <a
+              href={`${import.meta.env.BASE_URL}reports/argentina-case-study.pdf`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block bg-[#F3F4F6] rounded-xl p-4 border border-[#E2E8F0] flex items-start gap-3 hover:border-[#26437E]/40 transition-colors"
+            >
+              <FileText className="w-6 h-6 text-[#26437E] flex-shrink-0" />
+              <div>
+                <p className="text-sm font-semibold text-[#0A0A0A]">
+                  Argentina Case Study
+                </p>
+                <p className="text-xs text-[#4A4A4A] mt-1 leading-relaxed">
+                  How recurring crises, inflation, and debt dynamics have shaped Argentina&apos;s macroeconomic history and policy constraints.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Education guides */}
+      <section className="pt-32 border-t border-[#E2E8F0]">
+        <div className="bg-white rounded-2xl shadow-md p-6 sm:p-8 border border-[#E2E8F0]">
+          <h2 className="text-xl font-semibold mb-3 text-[#0A0A0A]">
+            Education Guides
+          </h2>
+          <p className="text-sm sm:text-base text-[#4A4A4A] mb-6 leading-relaxed">
+            Introductory guides to help members build practical market
+            knowledge—covering core concepts, mechanics, strategies, and risks in
+            plain language.
+          </p>
+
+          <div className="space-y-4">
+            <a
+              href={`${import.meta.env.BASE_URL}reports/beginners-guide-to-options.pdf`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block bg-[#F3F4F6] rounded-xl p-4 border border-[#E2E8F0] flex items-start gap-3 hover:border-[#26437E]/40 transition-colors"
+            >
+              <FileText className="w-6 h-6 text-[#26437E] flex-shrink-0" />
+              <div>
+                <p className="text-sm font-semibold text-[#0A0A0A]">
+                  A Beginner&apos;s Guide to Options
+                </p>
+                <p className="text-xs text-[#4A4A4A] mt-1 leading-relaxed">
+                  Option structure, mechanics, payoffs, and key concepts for calls, puts, and derivatives trading.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      </div>
     </main>
     </>
   );

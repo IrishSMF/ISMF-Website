@@ -108,7 +108,9 @@ export const ApplyNowModal: React.FC<ApplyNowModalProps> = ({ isOpen, onClose })
                   <X className="h-5 w-5" />
                 </button>
                 <h2 className="text-2xl font-bold mb-2 text-white">Join ISMF</h2>
-                <p className="text-[#E0E6F3] text-sm">Select a division to apply</p>
+                <p className="text-[#E0E6F3] text-sm">
+                  Forms for executive and analyst roles, or select a division below.
+                </p>
               </div>
 
               {/* Content */}
@@ -121,6 +123,16 @@ export const ApplyNowModal: React.FC<ApplyNowModalProps> = ({ isOpen, onClose })
                     className="flex w-full items-center justify-between rounded-xl border-2 border-[#26437E] bg-white p-4 text-left transition-all duration-200 hover:bg-[#EAF0FB]"
                   >
                     <span className="font-semibold text-[#26437E]">Executive applications</span>
+                  </a>
+                  <a
+                    href="https://forms.gle/6J9wdMX1bp5g2kkp7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex w-full items-center justify-between rounded-xl border-2 border-[#26437E] bg-white p-4 text-left transition-all duration-200 hover:bg-[#EAF0FB]"
+                  >
+                    <span className="font-semibold text-[#26437E]">
+                      General analysts and sector managers
+                    </span>
                   </a>
                   {divisions.map((division) => (
                     <motion.button
@@ -173,9 +185,9 @@ export const ApplyNowModal: React.FC<ApplyNowModalProps> = ({ isOpen, onClose })
                 {/* Info text */}
                 <div className="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
                   <p className="text-sm text-gray-800">
-                    <span className="font-semibold text-[#26437E]">Note:</span> Select an open
-                    division to continue with your application. Closed divisions are not currently
-                    accepting applications.
+                    <span className="font-semibold text-[#26437E]">Note:</span> Executive and
+                    analyst forms open in a new tab. For division teams, select an open division and
+                    press Continue. Closed divisions are not accepting applications.
                   </p>
                 </div>
               </div>
