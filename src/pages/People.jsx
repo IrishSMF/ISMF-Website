@@ -32,15 +32,6 @@ const teamData = [
         linkedin: "https://www.linkedin.com/in/krutika-dwivedi/"
       },
       {
-        name: "Caius Kauppi",
-        role: "Chairperson",
-        description: "Imperial MSc Finance & Accounting '27 (Prev. UCD)",
-        division: "Executive",
-        initials: "CK",
-        photo: `${import.meta.env.BASE_URL}team/caius-kauppi.png`,
-        linkedin: "https://www.linkedin.com/in/caiuskauppi/"
-      },
-      {
         name: "Erika O'Callaghan",
         role: "Co-Chief Operations Officer",
         description: "UCD Commerce '27",
