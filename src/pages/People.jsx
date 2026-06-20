@@ -15,9 +15,9 @@ const teamData = [
       },
       {
         name: "Rory Brennan",
-        role: "Co-Chief Executive Officer & Co-Director of Quantitative Finance",
+        role: "Co-Chief Executive Officer & Director of Quantitative Finance",
         description: "UCC BComm Banking & Finance '27",
-        division: "Executive",
+        division: "Executive + Quantitative Finance",
         initials: "RB",
         photo: `${import.meta.env.BASE_URL}team/rory-brennan.png`,
         linkedin: "https://www.linkedin.com/in/rory-brennan-28b551230/"
@@ -84,15 +84,6 @@ const teamData = [
         initials: "BSOB",
         photo: `${import.meta.env.BASE_URL}team/ben-sweeney-obrien.png`,
         linkedin: "https://www.linkedin.com/in/bensweeneyobrien/"
-      },
-      {
-        name: "Vacant",
-        role: "Co-Director of Quant",
-        description: "",
-        division: "Quantitative Finance",
-        initials: "U",
-        photo: `${import.meta.env.BASE_URL}team/vacant.png`,
-        linkedin: ""
       },
       {
         name: "Mony Aramalla",
