@@ -15,21 +15,12 @@ const teamData = [
       },
       {
         name: "Rory Brennan",
-        role: "Co-Chief Executive Officer & Co-Director of Quantitative Finance",
+        role: "Co-Chief Executive Officer & Director of Quantitative Finance",
         description: "UCC BComm Banking & Finance '27",
-        division: "Executive",
+        division: "Executive + Quantitative Finance",
         initials: "RB",
         photo: `${import.meta.env.BASE_URL}team/rory-brennan.png`,
         linkedin: "https://www.linkedin.com/in/rory-brennan-28b551230/"
-      },
-      {
-        name: "Caius Kauppi",
-        role: "Chairperson",
-        description: "Imperial MSc Finance & Accounting 2027 (Prev. UCD)",
-        division: "Executive",
-        initials: "CK",
-        photo: `${import.meta.env.BASE_URL}team/caius-kauppi.png`,
-        linkedin: "https://www.linkedin.com/in/caiuskauppi/"
       },
       {
         name: "Krutika Dwivedi",
@@ -41,13 +32,22 @@ const teamData = [
         linkedin: "https://www.linkedin.com/in/krutika-dwivedi/"
       },
       {
-        name: "Vacant",
-        role: "Chief Operations Officer",
-        description: "",
+        name: "Erika O'Callaghan",
+        role: "Co-Chief Operations Officer",
+        description: "UCD Commerce '27",
         division: "Executive",
-        initials: "U",
-        photo: `${import.meta.env.BASE_URL}team/vacant.png`,
-        linkedin: ""
+        initials: "EO'C",
+        photo: `${import.meta.env.BASE_URL}team/erika-ocallaghan.png`,
+        linkedin: "https://www.linkedin.com/in/erikaocallaghan/"
+      },
+      {
+        name: "Luke Kiely",
+        role: "Co-Chief Operations Officer",
+        description: "UCD Economics & Finance '29",
+        division: "Executive",
+        initials: "LK",
+        photo: `${import.meta.env.BASE_URL}team/luke-kiely.png`,
+        linkedin: "https://www.linkedin.com/in/luke-kiely-ire/"
       },
       {
         name: "Tobi Jakande",
@@ -86,15 +86,6 @@ const teamData = [
         linkedin: "https://www.linkedin.com/in/bensweeneyobrien/"
       },
       {
-        name: "Vacant",
-        role: "Co-Director of Quant",
-        description: "",
-        division: "Quantitative Finance",
-        initials: "U",
-        photo: `${import.meta.env.BASE_URL}team/vacant.png`,
-        linkedin: ""
-      },
-      {
         name: "Mony Aramalla",
         role: "Director of Technology",
         description: "UCD MSc Mechanical Engineering (integrated) '28",
@@ -104,13 +95,22 @@ const teamData = [
         linkedin: "https://www.linkedin.com/in/mony-aramalla/"
       },
       {
-        name: "Erika O'Callaghan",
+        name: "Vacant",
         role: "Director of Marketing",
-        description: "UCD Commerce '27",
+        description: "",
         division: "Marketing",
-        initials: "EO'C",
-        photo: `${import.meta.env.BASE_URL}team/erika-ocallaghan.png`,
-        linkedin: "https://www.linkedin.com/in/erikaocallaghan/"
+        initials: "U",
+        photo: `${import.meta.env.BASE_URL}team/vacant.png`,
+        linkedin: ""
+      },
+      {
+        name: "Amal Pramod",
+        role: "Investment Officer",
+        description: "TCD Business & Economics '28",
+        division: "Committee",
+        initials: "AP",
+        photo: `${import.meta.env.BASE_URL}team/amal-pramod.png`,
+        linkedin: "https://www.linkedin.com/in/amalpramod05/"
       },
       {
         name: "Patrick Ryan",
