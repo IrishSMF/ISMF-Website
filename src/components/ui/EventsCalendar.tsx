@@ -140,7 +140,7 @@ const defaultEvents: CalendarEvent[] = [
 
 const modeColorMap: Record<DeliveryMode, string> = {
   "In person": "bg-emerald-100 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300",
-  Hybrid: "bg-sky-100 text-sky-700 dark:bg-sky-500/10 dark:text-sky-300",
+  Hybrid: "bg-navy-light text-white/90 dark:bg-navy-light dark:text-white/90",
   Virtual: "bg-violet-100 text-violet-700 dark:bg-violet-500/10 dark:text-violet-300",
 };
 
@@ -202,8 +202,7 @@ export function EventsCalendar({ events = defaultEvents, className }: EventsCale
     <div
       className={cn(
         // Visual: neutral container background (no blue tint) while keeping shape and shadow
-        "w-full rounded-3xl border border-border/60 bg-white p-6 shadow-sm backdrop-blur-sm transition-colors sm:p-8",
-        "dark:bg-muted/20",
+        "w-full rounded-3xl border border-navy-border bg-navy-mid p-6 shadow-sm backdrop-blur-sm transition-colors sm:p-8",
         className,
       )}
     >
@@ -220,7 +219,7 @@ export function EventsCalendar({ events = defaultEvents, className }: EventsCale
       {/* Spacing: increased column gap for clearer separation between calendar and side panels */}
       <div className="grid gap-10 lg:gap-12 lg:grid-cols-[1.35fr_1fr]">
         {/* Visual: remove internal beige behind the Calendar heading and content */}
-        <Card className="border-0 bg-white shadow-none dark:bg-card">
+        <Card className="border-0 bg-transparent shadow-none">
           {/* Spacing: bottom padding to separate heading from calendar surface */}
           <CardHeader className="px-0 pt-0 pb-4">
             <CardTitle className="text-3xl font-semibold text-foreground">Calendar</CardTitle>
@@ -247,7 +246,7 @@ export function EventsCalendar({ events = defaultEvents, className }: EventsCale
               />
             </div>
             {/* Spacing: more breathing room below the calendar and between content blocks on white surface */}
-            <div className="mt-5 space-y-4 rounded-2xl border border-border/60 bg-white p-5 dark:bg-muted/30">
+            <div className="mt-5 space-y-4 rounded-2xl border border-navy-border bg-navy-light p-5">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-xs uppercase tracking-wider text-muted-foreground">Selected date</p>

@@ -154,13 +154,13 @@ export default function People() {
         <meta name="twitter:title" content="People — Irish Student Managed Fund" />
         <meta name="twitter:description" content="Meet the Irish Student Managed Fund leadership committee spanning Equities, Macro, Quant, and Alternatives." />
       </Helmet>
-      <section className="min-h-screen w-full bg-[#FFFDF5]">
+      <section className="min-h-screen w-full bg-navy-dark">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <header className="mb-12 text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[#0A0A0A] mb-4 leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-4 leading-tight">
             Meet the Committee
           </h1>
-          <p className="mt-3 max-w-2xl mx-auto text-[#4A4A4A] text-lg">
+          <p className="mt-3 max-w-2xl mx-auto text-white/70 text-lg">
             The Irish Student Managed Fund leadership committee spans Equities,
             Macro, Quant, and Alternatives.
           </p>

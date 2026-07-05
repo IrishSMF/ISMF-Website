@@ -7,7 +7,7 @@ export const PerformanceChart = () => {
   
   return (
     // Visual: ensure the portfolio performance panel sits on a clean white card (no dark blue background)
-    <Card className="p-6 space-y-6 bg-white border border-border hover:shadow-lg transition-shadow">
+    <Card className="p-6 space-y-6 bg-navy-mid border border-navy-border hover:shadow-lg transition-shadow">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
           <p className="text-sm font-semibold text-muted-foreground">Coming Soon</p>

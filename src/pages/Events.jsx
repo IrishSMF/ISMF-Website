@@ -24,11 +24,11 @@ export default function Events() {
         <meta name="twitter:title" content="Events — Irish Student Managed Fund" />
         <meta name="twitter:description" content="Our events are a great way to gain knowledge about finance and network with other students and industry professionals." />
       </Helmet>
-      <section className="w-full bg-[#FFFDF5]">
+      <section className="w-full bg-navy-dark">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-16 sm:px-6 lg:px-8">
         <header className="max-w-2xl mx-auto text-center space-y-4">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[#0A0A0A] leading-tight">Events</h1>
-          <p className="text-lg text-[#4A4A4A]">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight">Events</h1>
+          <p className="text-lg text-white/70">
             Our events are a great way to gain knowledge about finance and network with other students and industry professionals.
           </p>
         </header>

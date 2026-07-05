@@ -35,7 +35,7 @@ export const PortfolioBreakdown = () => {
     <section className="py-16">
       <div className="container mx-auto px-4">
         {/* Visual: use a clean white card with subtle border around the portfolio allocation section */}
-        <Card className="p-8 bg-white border border-border">
+        <Card className="p-8 bg-navy-mid border border-navy-border">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="h-[400px]">
               <ResponsiveContainer width="100%" height="100%">
@@ -95,7 +95,7 @@ export const PortfolioBreakdown = () => {
             </div>
           </div>
 
-          <div className="mt-8 p-4 bg-white rounded-lg border border-accent/30">
+          <div className="mt-8 p-4 bg-navy-light rounded-lg border border-navy-border">
             <p className="text-sm">
               <strong className="text-accent">💡 Why diversification matters:</strong> By spreading investments across different sectors, we reduce the risk that a downturn in any single industry will significantly impact our overall portfolio performance.
             </p>

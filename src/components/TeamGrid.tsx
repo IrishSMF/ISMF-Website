@@ -21,13 +21,13 @@ const TeamMemberCard: React.FC<{ member: TeamMember }> = ({ member }) => {
 
   return (
     <div
-      className="group relative bg-white rounded-xl border border-[#E2E8F0] p-6 transition-all duration-300 hover:scale-105 hover:ring-2 hover:ring-[#26437E] hover:shadow-lg cursor-pointer"
+      className="group relative bg-navy-mid rounded-xl border border-navy-border p-6 transition-all duration-300 hover:scale-105 hover:ring-2 hover:ring-white/30 hover:shadow-lg cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="flex flex-col items-center text-center space-y-4">
         {/* Avatar */}
-        <div className="w-24 h-24 rounded-full overflow-hidden bg-[#26437E] flex items-center justify-center flex-shrink-0">
+        <div className="w-24 h-24 rounded-full overflow-hidden bg-navy flex items-center justify-center flex-shrink-0">
           {member.photo && !imgErr ? (
             <img
               src={member.photo}
@@ -44,18 +44,18 @@ const TeamMemberCard: React.FC<{ member: TeamMember }> = ({ member }) => {
 
         {/* Name + Role */}
         <div className="space-y-1">
-          <h3 className="text-lg font-semibold text-[#0A0A0A]">
+          <h3 className="text-lg font-semibold text-white">
             {member.name}
           </h3>
-          <p className="text-sm text-[#4A4A4A] font-medium">{member.role}</p>
+          <p className="text-sm text-white/70 font-medium">{member.role}</p>
           {member.division && (
-            <p className="text-xs text-[#4A4A4A]/70">{member.division}</p>
+            <p className="text-xs text-white/50">{member.division}</p>
           )}
         </div>
 
         {/* Short description (optional) */}
         {member.description && (
-          <p className="text-sm text-[#4A4A4A] line-clamp-2">
+          <p className="text-sm text-white/70 line-clamp-2">
             {member.description}
           </p>
         )}
@@ -76,7 +76,7 @@ const TeamMemberCard: React.FC<{ member: TeamMember }> = ({ member }) => {
             >
               <Button
                 variant="outline"
-                className="border-[#26437E] text-[#26437E] hover:bg-[#26437E] hover:text-white"
+                className="border-white/40 text-white hover:bg-white hover:text-navy"
                 size="sm"
               >
                 View Profile

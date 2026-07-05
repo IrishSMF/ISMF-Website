@@ -20,16 +20,16 @@ export const Navigation = () => {
 
   const linkClass = ({ isActive }: { isActive: boolean }) =>
     `text-sm font-medium transition-colors ${
-      isActive ? "text-cornflower" : "text-white"
-    } hover:text-cornflower`;
+      isActive ? "text-white" : "text-white/80"
+    } hover:text-white`;
 
   return (
-    <nav className="sticky top-0 z-50 bg-gradient-to-b from-delft to-oxford text-white border-b">
+    <nav className="sticky top-0 z-50 bg-gradient-to-b from-navy-mid to-navy text-white border-b border-navy-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo links to Home */}
           <Link to="/" className="flex items-center gap-2">
-            <img src={ismfLogo} alt="ISMF logo linking to the Irish Student Managed Fund homepage" className="h-10 w-auto" />
+            <img src={ismfLogo} alt="ISMF logo linking to the Irish Student Managed Fund homepage" className="h-14 w-auto rounded" />
           </Link>
 
           {/* Desktop Nav */}
@@ -42,7 +42,7 @@ export const Navigation = () => {
 
             
 
-            <Button onClick={openModal} className="bg-cornflower text-white hover:brightness-95">
+            <Button onClick={openModal} className="bg-white text-navy hover:bg-white/90">
               Apply Now
             </Button>
           </div>
@@ -75,7 +75,7 @@ export const Navigation = () => {
 
               <div className="flex items-center justify-center gap-4 pt-2"></div>
 
-              <Button onClick={openModal} className="w-full bg-cornflower text-white hover:brightness-95">
+              <Button onClick={openModal} className="w-full bg-white text-navy hover:bg-white/90">
                 Apply Now
               </Button>
             </div>

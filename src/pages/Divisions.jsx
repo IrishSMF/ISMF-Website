@@ -77,13 +77,13 @@ export default function Divisions() {
         <meta name="twitter:title" content="Divisions — Irish Student Managed Fund" />
         <meta name="twitter:description" content="Explore the diverse divisions that drive our investment strategy and operations." />
       </Helmet>
-      <section className="bg-[#FFFDF5] min-h-screen w-full">
+      <section className="bg-navy-dark min-h-screen w-full">
       <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
         <header className="mb-12 text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[#26437E] mb-4 leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-4 leading-tight">
             Our Divisions
           </h1>
-          <p className="mt-3 max-w-2xl mx-auto text-[#4A4A4A] text-lg">
+          <p className="mt-3 max-w-2xl mx-auto text-white/70 text-lg">
             Explore the diverse divisions that drive our investment strategy and
             operations.
           </p>
@@ -103,8 +103,8 @@ export default function Divisions() {
                 className={`group transition-all duration-300 cursor-pointer rounded-xl border-l-4 p-6 shadow-sm hover:shadow-md
                   ${
                     isActive
-                      ? "bg-white border-[#26437E] scale-[1.02]"
-                      : "bg-[#F8FAFC] border-transparent hover:border-[#26437E]/50"
+                      ? "bg-navy-mid border-white scale-[1.02]"
+                      : "bg-navy-light/50 border-transparent hover:border-white/30"
                   }`}
                 onClick={() => handleDivisionClick(index)}
                 onKeyDown={(e) => handleKeyDown(e, index)}
@@ -117,13 +117,13 @@ export default function Divisions() {
                     <div
                       className={`w-12 h-12 rounded-lg flex items-center justify-center transition-colors duration-300 ${
                         isActive
-                          ? "bg-[#26437E] text-white"
-                          : "bg-[#26437E]/10 text-[#26437E]"
+                          ? "bg-white text-navy"
+                          : "bg-white/10 text-white"
                       }`}
                     >
                       <Icon className="w-6 h-6" />
                     </div>
-                    <h2 className="text-2xl font-semibold text-[#26437E]">
+                    <h2 className="text-2xl font-semibold text-white">
                       {division.name}
                     </h2>
                   </div>
@@ -132,7 +132,7 @@ export default function Divisions() {
                     transition={{ duration: 0.3 }}
                   >
                     <ChevronDown
-                      className={`w-6 h-6 text-[#26437E] transition-colors ${
+                      className={`w-6 h-6 text-white transition-colors ${
                         isActive ? "opacity-100" : "opacity-70"
                       }`}
                     />
@@ -148,7 +148,7 @@ export default function Divisions() {
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                       className="overflow-hidden"
                     >
-                      <p className="mt-4 text-[#4A4A4A] leading-relaxed">
+                      <p className="mt-4 text-white/70 leading-relaxed">
                         {division.description}
                       </p>
                     </motion.div>

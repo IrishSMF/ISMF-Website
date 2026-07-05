@@ -35,7 +35,7 @@ const Stat = ({ label, value, suffix = "", duration = 2.5 }: { label: string; va
 export const Hero = () => {
   const navigate = useNavigate();
   return (
-    <section className="relative overflow-hidden min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-br from-cornflower via-delft to-oxford text-white">
+    <section className="relative overflow-hidden min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-br from-navy-mid via-navy to-navy-dark text-white">
       {/* Animated background elements */}
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:40px_40px]" />
       <motion.div 
@@ -61,7 +61,7 @@ export const Hero = () => {
             <motion.img 
               src={ismfLogo} 
               alt="ISMF logo displayed on the hero section of the Irish Student Managed Fund homepage" 
-              className="h-24 md:h-32 w-auto mb-8 drop-shadow-2xl"
+              className="h-36 md:h-48 w-auto mb-8 drop-shadow-2xl rounded-lg"
               animate={{ y: [0, -8, 0] }}
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
             />
@@ -95,7 +95,7 @@ export const Hero = () => {
             >
               <Button 
                 size="lg" 
-                className="text-lg px-8 py-4 group bg-blush text-oxford hover:bg-blush/90 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="text-lg px-8 py-4 group bg-white text-navy hover:bg-white/90 transition-all duration-300 shadow-lg hover:shadow-xl"
                 // Navigation: route Learn More to the People page
                 onClick={() => navigate('/people')}
               >
@@ -111,7 +111,7 @@ export const Hero = () => {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="text-lg px-8 py-4 border-2 border-white/30 bg-white/10 hover:bg-white hover:text-oxford transition-all duration-300 shadow-lg hover:shadow-xl backdrop-blur-sm"
+                className="text-lg px-8 py-4 border-2 border-white/30 bg-white/10 hover:bg-white hover:text-navy transition-all duration-300 shadow-lg hover:shadow-xl backdrop-blur-sm"
                 onClick={() => navigate('/research')}
               >
                 View Research

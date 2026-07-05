@@ -23,7 +23,7 @@ export default function Performance(){
             <meta name="twitter:title" content="Performance — Irish Student Managed Fund" />
             <meta name="twitter:description" content="Track our fund's portfolio performance and allocation across different sectors and asset classes." />
           </Helmet>
-          <section className="container mx-auto px-4 py-16">
+          <section className="container mx-auto px-4 py-16 bg-navy-dark min-h-screen">
             <div className="mb-12">
                 <h1 className="text-3xl font-bold mb-6 text-center">Portfolio Performance</h1>
                 <PerformanceChart />

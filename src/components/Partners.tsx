@@ -28,7 +28,7 @@ export const Partners = () => {
               <Card 
                 key={index}
                 // Visual: partner tiles are clear with a subtle outline instead of a solid light blue fill
-                className="aspect-square flex items-center justify-center p-8 border border-primary/20 bg-white hover:bg-primary/5 hover:shadow-lg transition-all hover:scale-105 duration-300"
+                className="aspect-square flex items-center justify-center p-8 border border-navy-border bg-navy-mid hover:bg-navy-light hover:shadow-lg transition-all hover:scale-105 duration-300"
               >
                 <div className="text-center space-y-3">
                   <Icon className="h-12 w-12 mx-auto text-muted-foreground/60" />
@@ -39,18 +39,17 @@ export const Partners = () => {
           })}
         </div>
 
-        <Card className="p-8 bg-primary text-primary-foreground max-w-3xl mx-auto">
+        <Card className="p-8 max-w-3xl mx-auto border border-navy-border bg-navy-mid hover:bg-navy-light hover:shadow-lg transition-all hover:scale-[1.02] duration-300">
           <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">Become a Partner</h3>
-            <p className="text-primary-foreground/90 mb-6">
+            <h3 className="text-2xl font-bold mb-4 text-white">Become a Partner</h3>
+            <p className="text-white/70 mb-6">
               Join us in shaping the next generation of financial professionals. 
               Partner organizations gain access to talented students, research insights, 
               and opportunities to support meaningful education initiatives.
             </p>
-            {/* Action: clicking Partner With Us opens an email to the ISMF Gmail account */}
             <a
               href="mailto:irishstudentfund@gmail.com"
-              className="inline-block bg-primary-foreground text-primary px-6 py-2 rounded-lg font-semibold hover:scale-105 transition-transform"
+              className="inline-block bg-white text-navy px-6 py-2 rounded-lg font-semibold hover:bg-white/90 hover:scale-105 transition-all duration-300"
             >
               Partner With Us
             </a>

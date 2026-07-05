@@ -95,11 +95,11 @@ export const ApplyNowModal: React.FC<ApplyNowModalProps> = ({ isOpen, onClose })
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ duration: 0.2, ease: 'easeOut' }}
-              className="bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden border border-gray-200"
+              className="bg-navy-mid rounded-2xl shadow-2xl max-w-md w-full overflow-hidden border border-navy-border"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Header */}
-              <div className="bg-[#26437E] text-white p-6 relative">
+              <div className="bg-navy text-white p-6 relative">
                 <button
                   onClick={handleClose}
                   className="absolute top-4 right-4 text-white hover:bg-white/20 rounded-full p-2 transition-colors"
@@ -108,7 +108,7 @@ export const ApplyNowModal: React.FC<ApplyNowModalProps> = ({ isOpen, onClose })
                   <X className="h-5 w-5" />
                 </button>
                 <h2 className="text-2xl font-bold mb-2 text-white">Join ISMF</h2>
-                <p className="text-[#E0E6F3] text-sm">
+                <p className="text-white/70 text-sm">
                   Forms for executive and analyst roles, or select a division below.
                 </p>
               </div>
@@ -120,17 +120,17 @@ export const ApplyNowModal: React.FC<ApplyNowModalProps> = ({ isOpen, onClose })
                     href="https://forms.gle/DtDThwoGjxPJQiwUA"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex w-full items-center justify-between rounded-xl border-2 border-[#26437E] bg-white p-4 text-left transition-all duration-200 hover:bg-[#EAF0FB]"
+                    className="flex w-full items-center justify-between rounded-xl border-2 border-white/40 bg-navy-light p-4 text-left transition-all duration-200 hover:bg-navy"
                   >
-                    <span className="font-semibold text-[#26437E]">Executive applications</span>
+                    <span className="font-semibold text-white">Executive applications</span>
                   </a>
                   <a
                     href="https://forms.gle/6J9wdMX1bp5g2kkp7"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex w-full items-center justify-between rounded-xl border-2 border-[#26437E] bg-white p-4 text-left transition-all duration-200 hover:bg-[#EAF0FB]"
+                    className="flex w-full items-center justify-between rounded-xl border-2 border-white/40 bg-navy-light p-4 text-left transition-all duration-200 hover:bg-navy"
                   >
-                    <span className="font-semibold text-[#26437E]">
+                    <span className="font-semibold text-white">
                       General analysts and sector managers
                     </span>
                   </a>
@@ -144,9 +144,9 @@ export const ApplyNowModal: React.FC<ApplyNowModalProps> = ({ isOpen, onClose })
                       className={`w-full p-4 rounded-xl border-2 transition-all duration-200 text-left relative ${
                         division.isOpen
                           ? selectedDivision === division.id
-                            ? 'border-[#26437E] bg-[#26437E] text-white shadow-md'
-                            : 'border-[#26437E] hover:bg-[#EAF0FB] bg-white'
-                          : 'border-gray-200 bg-[#f4f4f4] cursor-not-allowed opacity-50'
+                            ? 'border-white bg-white text-navy shadow-md'
+                            : 'border-white/40 hover:bg-navy bg-navy-light'
+                          : 'border-navy-border bg-navy-dark cursor-not-allowed opacity-50'
                       }`}
                     >
                       <div className="flex items-center justify-between">
@@ -155,15 +155,15 @@ export const ApplyNowModal: React.FC<ApplyNowModalProps> = ({ isOpen, onClose })
                             className={`font-semibold ${
                               division.isOpen
                                 ? selectedDivision === division.id
-                                  ? 'text-white'
-                                  : 'text-[#26437E]'
-                                : 'text-[#A0A0A0]'
+                                  ? 'text-navy'
+                                  : 'text-white'
+                                : 'text-white/40'
                             }`}
                           >
                             {division.name}
                           </p>
                           {!division.isOpen && (
-                            <p className="text-xs text-[#A0A0A0] mt-1">
+                            <p className="text-xs text-white/40 mt-1">
                               Applications currently closed
                             </p>
                           )}
@@ -174,7 +174,7 @@ export const ApplyNowModal: React.FC<ApplyNowModalProps> = ({ isOpen, onClose })
                             animate={{ scale: 1 }}
                             transition={{ type: 'spring', stiffness: 500, damping: 30 }}
                           >
-                            <CheckCircle2 className="h-6 w-6 text-white" />
+                            <CheckCircle2 className="h-6 w-6 text-navy" />
                           </motion.div>
                         )}
                       </div>
@@ -183,9 +183,9 @@ export const ApplyNowModal: React.FC<ApplyNowModalProps> = ({ isOpen, onClose })
                 </div>
 
                 {/* Info text */}
-                <div className="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
-                  <p className="text-sm text-gray-800">
-                    <span className="font-semibold text-[#26437E]">Note:</span> Executive and
+                <div className="mt-6 p-4 bg-navy-light rounded-lg border border-navy-border">
+                  <p className="text-sm text-white/80">
+                    <span className="font-semibold text-white">Note:</span> Executive and
                     analyst forms open in a new tab. For division teams, select an open division and
                     press Continue. Closed divisions are not accepting applications.
                   </p>
@@ -197,7 +197,7 @@ export const ApplyNowModal: React.FC<ApplyNowModalProps> = ({ isOpen, onClose })
                 <Button
                   onClick={handleClose}
                   variant="outline"
-                  className="flex-1 border-[#26437E] text-[#26437E] hover:bg-[#EAF0FB]"
+                  className="flex-1 border-white/40 text-white hover:bg-navy-light"
                 >
                   Cancel
                 </Button>
@@ -206,8 +206,8 @@ export const ApplyNowModal: React.FC<ApplyNowModalProps> = ({ isOpen, onClose })
                   disabled={!selectedDivision}
                   className={`flex-1 ${
                     selectedDivision
-                      ? 'bg-[#26437E] hover:bg-[#1E3664] text-white'
-                      : 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                      ? 'bg-white hover:bg-white/90 text-navy'
+                      : 'bg-navy-border text-white/40 cursor-not-allowed'
                   }`}
                 >
                   Continue

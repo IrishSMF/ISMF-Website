@@ -14,58 +14,58 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Updated with new color palette */
-    --background: 54 100% 97%; /* ivory */
-    --foreground: 213 100% 11%; /* oxford */
+    /* Dark navy palette — anchored to logo #0B243B */
+    --background: 208 73% 10%; /* navy-dark */
+    --foreground: 0 0% 100%; /* white */
 
-    --card: 208 71% 72%; /* blush */
-    --card-foreground: 213 100% 11%; /* oxford */
+    --card: 209 62% 16%; /* navy-mid */
+    --card-foreground: 0 0% 100%;
 
-    --popover: 54 100% 97%; /* ivory */
-    --popover-foreground: 213 100% 11%; /* oxford */
+    --popover: 209 62% 16%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 227 64% 62%; /* cornflower */
-    --primary-foreground: 0 0% 100%; /* white */
+    --primary: 0 0% 100%; /* white accent on navy */
+    --primary-foreground: 208 73% 10%; /* navy-dark */
 
-    --secondary: 208 71% 72%; /* blush */
-    --secondary-foreground: 227 64% 62%; /* cornflower */
+    --secondary: 209 56% 23%; /* navy-light */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 208 71% 72%; /* blush */
-    --muted-foreground: 213 50% 30%; /* muted oxford */
+    --muted: 209 40% 20%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 227 64% 62%; /* cornflower */
-    --accent-foreground: 0 0% 100%; /* white */
+    --accent: 0 0% 100%;
+    --accent-foreground: 208 73% 10%;
 
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 208 71% 80%; /* light blush */
-    --input: 208 71% 80%; /* light blush */
-    --ring: 227 64% 62%; /* cornflower */
+    --border: 209 45% 28%;
+    --input: 209 45% 28%;
+    --ring: 0 0% 100%;
 
     --radius: 0.75rem;
     
-    --chart-1: 220 70% 35%;
+    --chart-1: 0 0% 100%;
     --chart-2: 160 70% 45%;
-    --chart-3: 200 80% 50%;
+    --chart-3: 209 45% 28%;
     --chart-4: 280 60% 55%;
     --chart-5: 40 70% 55%;
 
-    --sidebar-background: 0 0% 98%;
+    --sidebar-background: 208 69% 14%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-foreground: 0 0% 95%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary: 0 0% 100%;
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-primary-foreground: 208 73% 10%;
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent: 209 56% 23%;
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-accent-foreground: 0 0% 95%;
 
-    --sidebar-border: 220 13% 91%;
+    --sidebar-border: 209 45% 28%;
 
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 0 0% 100%;
   }
 
   .dark {
@@ -147,9 +147,9 @@ All colors MUST be HSL.
 
   .card {
     background: var(--surface);
-    color: var(--text-dark);
+    color: var(--text-light);
     border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(2, 8, 23, 0.12);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
   }
 
   .btn-primary {

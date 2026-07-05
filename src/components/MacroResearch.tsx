@@ -24,10 +24,10 @@ const MacroChart = ({ title, data }: { title: string; data: any[] }) => (
             fontSize: '12px'
           }}
         />
-        <Bar dataKey="value1" fill="hsl(180, 70%, 70%)" />
-        <Bar dataKey="value2" fill="hsl(200, 70%, 60%)" />
-        <Bar dataKey="value3" fill="hsl(220, 70%, 50%)" />
-        <Bar dataKey="value4" fill="hsl(220, 70%, 40%)" />
+        <Bar dataKey="value1" fill="#254A66" />
+        <Bar dataKey="value2" fill="#1A3D5C" />
+        <Bar dataKey="value3" fill="#102A44" />
+        <Bar dataKey="value4" fill="#0B243B" />
       </BarChart>
     </ResponsiveContainer>
   </Card>

@@ -35,20 +35,20 @@ const ChartCard = ({
   };
 
   return (
-    <Card className="p-6 bg-[#81B9EE] border-0 shadow-md rounded-2xl hover:shadow-lg transition-all duration-300 cursor-pointer group">
+    <Card className="p-6 bg-navy-light border border-navy-border shadow-md rounded-2xl hover:shadow-lg transition-all duration-300 cursor-pointer group">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-semibold text-[#011936]">{title}</h3>
-        <TrendingUp className="h-5 w-5 text-[#6184D8] group-hover:text-[#1D3461] transition-colors" />
+        <h3 className="text-lg font-semibold text-white">{title}</h3>
+        <TrendingUp className="h-5 w-5 text-white/70 group-hover:text-white transition-colors" />
       </div>
       
       <div className="mb-4">
-        <div className="text-3xl font-bold text-[#011936] mb-1">
+        <div className="text-3xl font-bold text-white mb-1">
           {value}%
         </div>
         <div className={`text-sm font-medium flex items-center gap-1 ${getTrendColor(trend)}`}>
           <span>{getTrendIcon(trend)}</span>
           <span>{Math.abs(change)}%</span>
-          <span className="text-[#011936]/70">from last month</span>
+          <span className="text-white/70">from last month</span>
         </div>
       </div>
 
@@ -70,11 +70,11 @@ const ChartCard = ({
             />
             <Tooltip
               contentStyle={{
-                backgroundColor: '#FFFCF2',
-                border: '1px solid #6184D8',
+                backgroundColor: '#102A44',
+                border: '1px solid #254A66',
                 borderRadius: '8px',
                 fontSize: '12px',
-                color: '#011936'
+                color: '#FFFFFF'
               }}
               formatter={(value: any) => [`${value}%`, dataKey]}
             />
@@ -87,16 +87,16 @@ const ChartCard = ({
           <Button 
             variant="outline" 
             size="sm" 
-            className="w-full text-[#6184D8] border-[#6184D8] hover:bg-[#6184D8] hover:text-white transition-colors"
+            className="w-full text-white border-white/40 hover:bg-white hover:text-navy transition-colors"
             onClick={() => setIsModalOpen(true)}
           >
             View Details
             <ExternalLink className="ml-2 h-4 w-4" />
           </Button>
         </DialogTrigger>
-        <DialogContent className="max-w-4xl bg-[#FFFCF2] border-[#6184D8]">
+        <DialogContent className="max-w-4xl bg-navy-mid border-navy-border">
           <DialogHeader>
-            <DialogTitle className="text-[#011936] text-xl font-bold">
+            <DialogTitle className="text-white text-xl font-bold">
               {title} - Historical Analysis
             </DialogTitle>
           </DialogHeader>
@@ -104,26 +104,26 @@ const ChartCard = ({
             <div className="h-80">
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={historicalData}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#E5E7EB" />
+                  <CartesianGrid strokeDasharray="3 3" stroke="#254A66" />
                   <XAxis 
                     dataKey="date" 
-                    stroke="#011936"
+                    stroke="rgba(255,255,255,0.55)"
                     fontSize={12}
-                    tick={{ fill: '#011936' }}
+                    tick={{ fill: 'rgba(255,255,255,0.55)' }}
                   />
                   <YAxis 
-                    stroke="#011936"
+                    stroke="rgba(255,255,255,0.55)"
                     fontSize={12}
-                    tick={{ fill: '#011936' }}
+                    tick={{ fill: 'rgba(255,255,255,0.55)' }}
                     domain={['dataMin - 0.5', 'dataMax + 0.5']}
                   />
                   <Tooltip
                     contentStyle={{
-                      backgroundColor: '#FFFCF2',
-                      border: '1px solid #6184D8',
+                      backgroundColor: '#102A44',
+                      border: '1px solid #254A66',
                       borderRadius: '8px',
                       fontSize: '12px',
-                      color: '#011936'
+                      color: '#FFFFFF'
                     }}
                     formatter={(value: any) => [`${value}%`, dataKey]}
                   />
@@ -139,9 +139,9 @@ const ChartCard = ({
               </ResponsiveContainer>
             </div>
             
-            <div className="bg-[#81B9EE] p-4 rounded-lg border border-[#6184D8]/20">
-              <h4 className="font-semibold text-[#011936] mb-2">Research Insights</h4>
-              <p className="text-sm text-[#011936]/80 leading-relaxed">
+            <div className="bg-navy-light p-4 rounded-lg border border-navy-border">
+              <h4 className="font-semibold text-white mb-2">Research Insights</h4>
+              <p className="text-sm text-white/80 leading-relaxed">
                 {dataKey === 'inflation' 
                   ? "Recent inflation trends show a gradual moderation from peak levels, indicating potential easing of price pressures. This trend suggests the effectiveness of monetary policy measures and could signal a more stable economic environment for investment decisions."
                   : "Unemployment rates continue to show resilience in the labor market, with consistent improvements indicating strong economic fundamentals. This trend supports consumer spending and overall economic stability, creating favorable conditions for equity investments."
@@ -166,7 +166,7 @@ export const MacroDashboard = () => {
   if (isLoading) {
     return (
       // Background: use neutral beige instead of blue band behind the dashboard
-      <section className="py-16 bg-[#FFFCF2]">
+      <section className="py-16 bg-navy-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -179,7 +179,7 @@ export const MacroDashboard = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {[1, 2].map((i) => (
-              <Card key={i} className="p-6 bg-[#81B9EE] border-0 shadow-md rounded-2xl">
+              <Card key={i} className="p-6 bg-navy-light border border-navy-border shadow-md rounded-2xl">
                 <div className="animate-pulse">
                   <div className="h-4 bg-gray-300 rounded w-1/2 mb-4"></div>
                   <div className="h-8 bg-gray-300 rounded w-1/4 mb-2"></div>
@@ -197,7 +197,7 @@ export const MacroDashboard = () => {
   if (error) {
     return (
       // Background: same beige backdrop for error state
-      <section className="py-16 bg-[#FFFCF2]">
+      <section className="py-16 bg-navy-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -207,7 +207,7 @@ export const MacroDashboard = () => {
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
               Unable to load economic data at this time. Please try again later.
             </p>
-            <Button onClick={() => refetch()} className="bg-[#6184D8] hover:bg-[#1D3461]">
+            <Button onClick={() => refetch()} className="bg-white text-navy hover:bg-white/90">
               <RefreshCw className="mr-2 h-4 w-4" />
               Retry
             </Button>
@@ -219,12 +219,12 @@ export const MacroDashboard = () => {
 
   return (
     // Background: main macro dashboard sits on beige, while keeping existing card/chart colors
-    <section className="py-16 bg-[#FFFCF2]">
+    <section className="py-16 bg-navy-dark">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <Activity className="h-8 w-8 text-[#6184D8]" />
-            <h2 className="text-3xl md:text-4xl font-bold text-[#011936]">Macro Research Dashboard</h2>
+            <Activity className="h-8 w-8 text-white" />
+            <h2 className="text-3xl md:text-4xl font-bold text-white">Macro Research Dashboard</h2>
           </div>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-4">
             Live economic indicators drawn from trusted public datasets.
@@ -236,7 +236,7 @@ export const MacroDashboard = () => {
               variant="ghost"
               size="sm"
               onClick={() => refetch()}
-              className="ml-2 text-[#6184D8] hover:text-[#1D3461]"
+              className="ml-2 text-white hover:text-white/80"
             >
               <RefreshCw className="h-4 w-4" />
             </Button>
@@ -249,7 +249,7 @@ export const MacroDashboard = () => {
             value={economicData?.inflation.current || 0}
             change={economicData?.inflation.change || 0}
             trend={economicData?.inflation.trend || 'stable'}
-            color="#6184D8"
+            color="#FFFFFF"
             dataKey="inflation"
             historicalData={economicData?.historicalData || []}
           />
@@ -259,24 +259,24 @@ export const MacroDashboard = () => {
             value={economicData?.unemployment.current || 0}
             change={economicData?.unemployment.change || 0}
             trend={economicData?.unemployment.trend || 'stable'}
-            color="#1D3461"
+            color="#0B243B"
             dataKey="unemployment"
             historicalData={economicData?.historicalData || []}
           />
         </div>
 
-        <Card className="p-6 bg-gradient-to-r from-[#6184D8]/5 to-[#1D3461]/5 border-[#6184D8]/20 shadow-lg">
+        <Card className="p-6 bg-gradient-to-r from-navy-light to-navy-mid border border-navy-border shadow-lg">
           <div className="flex items-start gap-4">
-            <Globe className="h-6 w-6 text-[#6184D8] mt-1 flex-shrink-0" />
+            <Globe className="h-6 w-6 text-white mt-1 flex-shrink-0" />
             <div>
-              <h3 className="font-bold text-lg mb-2 text-[#011936]">Real-Time Economic Intelligence</h3>
-              <p className="text-[#011936]/80 leading-relaxed mb-4">
+              <h3 className="font-bold text-lg mb-2 text-white">Real-Time Economic Intelligence</h3>
+              <p className="text-white/80 leading-relaxed mb-4">
                 Our macro research dashboard provides real-time access to key economic indicators that drive 
                 investment decisions. By monitoring inflation and unemployment trends, we can identify market 
                 opportunities and assess economic risks. This data-driven approach ensures our investment 
                 strategies are grounded in solid macroeconomic fundamentals.
               </p>
-              <div className="text-sm text-[#011936]/60 border-t border-[#6184D8]/20 pt-3">
+              <div className="text-sm text-white/60 border-t border-navy-border pt-3">
                 <p className="font-medium mb-1">Data Sources:</p>
                 <p>Federal Reserve Economic Data (FRED), OECD Economic Indicators, World Bank Open Data</p>
               </div>

@@ -47,12 +47,12 @@ export const AboutSection = () => {
                 className="p-6 hover:shadow-lg transition-all hover:scale-105 duration-300"
               >
                 <div className="flex gap-4">
-                  <div className="p-3 rounded-lg bg-cornflower/10 h-fit">
-                    <Icon className="h-6 w-6 text-cornflower" />
+                  <div className="p-3 rounded-lg bg-white/10 h-fit">
+                    <Icon className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2 text-oxford">{feature.title}</h3>
-                    <p className="text-oxford/70">{feature.description}</p>
+                    <h3 className="text-xl font-bold mb-2 text-white">{feature.title}</h3>
+                    <p className="text-white/70">{feature.description}</p>
                   </div>
                 </div>
               </Card>
@@ -60,7 +60,7 @@ export const AboutSection = () => {
           })}
         </div>
 
-        <Card className="p-8 bg-gradient-to-r from-cornflower to-delft text-white">
+        <Card className="p-8 bg-gradient-to-r from-navy-light to-navy-mid text-white border border-navy-border">
           <div className="max-w-2xl mx-auto text-center">
             <h3 className="text-2xl font-bold mb-4 text-white">Our Mission</h3>
             <p className="text-lg text-white/90">

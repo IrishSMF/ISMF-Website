@@ -19,12 +19,22 @@ export default {
         serif: ['Merriweather', 'Georgia', 'Times New Roman', 'serif'],
       },
       colors: {
-        // New color palette
-        ivory: '#FFFCF2',
-        cornflower: '#6184D8',
-        delft: '#1D3461',
-        oxford: '#011936',
-        blush: '#81B9EE',
+        navy: {
+          DEFAULT: '#0B243B',
+          dark: '#071827',
+          mid: '#102A44',
+          light: '#1A3D5C',
+          border: '#254A66',
+        },
+        brand: {
+          accent: '#FFFFFF',
+          'accent-light': 'rgba(255, 255, 255, 0.75)',
+        },
+        ivory: '#071827',
+        cornflower: '#FFFFFF',
+        delft: '#102A44',
+        oxford: '#0B243B',
+        blush: '#1A3D5C',
         'primary-contrast': '#ffffff',
         
         // Existing shadcn colors (keep for compatibility)
