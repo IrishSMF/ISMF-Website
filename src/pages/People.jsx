@@ -5,22 +5,13 @@ import TeamGrid from "@/components/TeamGrid";
 // Team member data with the new structure
 const teamData = [
      {
-        name: "Raj Aryan Upadhyaya",
-        role: "Founder & Co-Chief Executive Officer",
-        description: "TCD Computer Science & Economics '27",
+        name: "Michael E. Gasior",
+        role: "Chief Executive Officer",
+        description: "QUB PhD Psychology",
         division: "Executive",
-        initials: "RAU",
-        photo: `${import.meta.env.BASE_URL}team/raj-aryan-upadhyaya.png`,
-        linkedin: "https://www.linkedin.com/in/raupadhyaya04/"
-      },
-      {
-        name: "Rory Brennan",
-        role: "Co-Chief Executive Officer & Director of Quantitative Finance",
-        description: "UCC BComm Banking & Finance '27",
-        division: "Executive + Quantitative Finance",
-        initials: "RB",
-        photo: `${import.meta.env.BASE_URL}team/rory-brennan.png`,
-        linkedin: "https://www.linkedin.com/in/rory-brennan-28b551230/"
+        initials: "MEG",
+        photo: `${import.meta.env.BASE_URL}team/michael-e-gasior.png`,
+        linkedin: "https://www.linkedin.com/in/michaelegasior/"
       },
       {
         name: "Krutika Dwivedi",
@@ -86,6 +77,15 @@ const teamData = [
         linkedin: "https://www.linkedin.com/in/bensweeneyobrien/"
       },
       {
+        name: "Rory Brennan",
+        role: "Director of Quantitative Finance",
+        description: "UCC BComm Banking & Finance '27",
+        division: "Quantitative Finance",
+        initials: "RB",
+        photo: `${import.meta.env.BASE_URL}team/rory-brennan.png`,
+        linkedin: "https://www.linkedin.com/in/rory-brennan-28b551230/"
+      },
+      {
         name: "Mony Aramalla",
         role: "Director of Technology",
         description: "UCD MSc Mechanical Engineering (integrated) '28",
@@ -95,22 +95,22 @@ const teamData = [
         linkedin: "https://www.linkedin.com/in/mony-aramalla/"
       },
       {
+        name: "Ana Silva",
+        role: "Investment Officer & Co-Director of Marketing",
+        description: "UCD Economics & Finance '29",
+        division: "Committee",
+        initials: "AS",
+        photo: `${import.meta.env.BASE_URL}team/ana-silva.png`,
+        linkedin: "https://www.linkedin.com/in/ana-silva-4324022b9"
+      },
+      {
         name: "Vacant",
-        role: "Director of Marketing",
+        role: "Co-Director of Marketing",
         description: "",
         division: "Marketing",
         initials: "U",
         photo: `${import.meta.env.BASE_URL}team/vacant.png`,
         linkedin: ""
-      },
-      {
-        name: "Amal Pramod",
-        role: "Investment Officer",
-        description: "TCD Business & Economics '28",
-        division: "Committee",
-        initials: "AP",
-        photo: `${import.meta.env.BASE_URL}team/amal-pramod.png`,
-        linkedin: "https://www.linkedin.com/in/amalpramod05/"
       },
       {
         name: "Patrick Ryan",
@@ -120,15 +120,6 @@ const teamData = [
         initials: "PR",
         photo: `${import.meta.env.BASE_URL}team/patrick-ryan.png`,
         linkedin: "https://www.linkedin.com/in/patrick-ryan-ucd/"
-      },
-      {
-        name: "Ana Silva",
-        role: "Investment Officer",
-        description: "UCD Economics & Finance '29",
-        division: "Committee",
-        initials: "AS",
-        photo: `${import.meta.env.BASE_URL}team/ana-silva.png`,
-        linkedin: "https://www.linkedin.com/in/ana-silva-4324022b9"
       },
 ];
 
@@ -154,13 +145,13 @@ export default function People() {
         <meta name="twitter:title" content="People — Irish Student Managed Fund" />
         <meta name="twitter:description" content="Meet the Irish Student Managed Fund leadership committee spanning Equities, Macro, Quant, and Alternatives." />
       </Helmet>
-      <section className="min-h-screen w-full bg-navy-dark">
+      <section className="min-h-screen w-full bg-[#FFFDF5]">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <header className="mb-12 text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-4 leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[#0A0A0A] mb-4 leading-tight">
             Meet the Committee
           </h1>
-          <p className="mt-3 max-w-2xl mx-auto text-white/70 text-lg">
+          <p className="mt-3 max-w-2xl mx-auto text-[#4A4A4A] text-lg">
             The Irish Student Managed Fund leadership committee spans Equities,
             Macro, Quant, and Alternatives.
           </p>

@@ -35,7 +35,7 @@ export default function Research() {
       </Helmet>
       <main className="min-h-screen bg-navy-dark text-white pt-24">
       {/* Hero / Intro */}
-      <section className="max-w-5xl mx-auto px-6 pb-20 grid gap-8 md:grid-cols-[1.8fr,1.4fr]">
+      <section className="max-w-5xl mx-auto px-6 pb-20 grid gap-8 md:grid-cols-[1.8fr,1.4fr] flex justify-center">
         <div className="bg-navy-mid rounded-2xl shadow-md p-6 sm:p-8 border border-navy-border mb-8 mt-8">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 leading-tight text-center">
             Research
@@ -43,7 +43,8 @@ export default function Research() {
 
           <p className="text-lg text-white/70 max-w-3xl leading-relaxed">
             At the Irish Student Managed Fund, research underpins every investment
-            decision. Our teams publish a{" "}
+            decision. <br />
+            Our Macro team publishes a{" "}
             <span className="font-semibold">bi-monthly macro outlook</span> and
             sector-focused{" "}
             <span className="font-semibold">commodities newsletters</span>, and
