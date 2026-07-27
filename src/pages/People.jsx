@@ -5,13 +5,13 @@ import TeamGrid from "@/components/TeamGrid";
 // Team member data with the new structure
 const teamData = [
      {
-        name: "Michael E. Gasior",
+        name: "To Be Confirmed",
         role: "Chief Executive Officer",
-        description: "QUB PhD Psychology",
+        description: "",
         division: "Executive",
-        initials: "MEG",
-        photo: `${import.meta.env.BASE_URL}team/michael-e-gasior.png`,
-        linkedin: "https://www.linkedin.com/in/michaelegasior/"
+        initials: "TBC",
+        photo: `${import.meta.env.BASE_URL}team/tbc.png`,
+        linkedin: "https://www.linkedin.com/in/lockedin/"
       },
       {
         name: "Krutika Dwivedi",
