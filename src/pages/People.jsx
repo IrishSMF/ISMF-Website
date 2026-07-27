@@ -14,6 +14,15 @@ const teamData = [
         linkedin: "https://www.linkedin.com/in/michaelegasior/"
       },
       {
+        name: "Krutika Dwivedi",
+        role: "Chairperson",
+        description: "UCD Commerce '27",
+        division: "Executive",
+        initials: "KD",
+        photo: `${import.meta.env.BASE_URL}team/krutika-dwivedi.png`,
+        linkedin: "https://www.linkedin.com/in/krutika-dwivedi/"
+      },
+      {
         name: "Erika O'Callaghan",
         role: "Co-Chief Operations Officer",
         description: "UCD Commerce '27",
