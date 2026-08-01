@@ -5,7 +5,7 @@ import TeamGrid from "@/components/TeamGrid";
 // Team member data with the new structure
 const teamData = [
      {
-        name: "To Be Confirmed",
+        name: "To Be Announced",
         role: "Chief Executive Officer",
         description: "",
         division: "Executive",
@@ -32,22 +32,22 @@ const teamData = [
         linkedin: "https://www.linkedin.com/in/erikaocallaghan/"
       },
       {
-        name: "Luke Kiely",
+        name: "To be Announced",
         role: "Co-Chief Operations Officer",
-        description: "UCD Economics & Finance '29",
+        description: "TBA",
         division: "Executive",
-        initials: "LK",
-        photo: `${import.meta.env.BASE_URL}team/luke-kiely.png`,
-        linkedin: "https://www.linkedin.com/in/luke-kiely-ire/"
+        initials: "TBA",
+        photo: `${import.meta.env.BASE_URL}team/tba.png`,
+        linkedin: "https://www.linkedin.com/in/lockedin"
       },
       {
-        name: "Tobi Jakande",
+        name: "To be Announced",
         role: "Chief Financial Officer",
-        description: "Maynooth University Finance '27",
+        description: "TBA",
         division: "Executive",
-        initials: "TJ",
-        photo: `${import.meta.env.BASE_URL}team/tobi-jakande.png`,
-        linkedin: "https://www.linkedin.com/in/tobi-jakande/"
+        initials: "TBA",
+        photo: `${import.meta.env.BASE_URL}team/tba.png`,
+        linkedin: "https://www.linkedin.com/in/lockedin"
       },
       {
         name: "George Cussen",
