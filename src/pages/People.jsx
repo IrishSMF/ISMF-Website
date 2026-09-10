@@ -5,13 +5,13 @@ import TeamGrid from "@/components/TeamGrid";
 // Team member data with the new structure
 const teamData = [
      {
-        name: "To Be Announced",
+        name: "Michael E. Gasior",
         role: "Chief Executive Officer",
         description: "",
         division: "Executive",
-        initials: "TBC",
-        photo: `${import.meta.env.BASE_URL}team/tbc.png`,
-        linkedin: "https://www.linkedin.com/in/lockedin/"
+        initials: "MEG",
+        photo: `${import.meta.env.BASE_URL}team/michael-e-gasior.png`,
+        linkedin: "https://www.linkedin.com/in/michaelegasior/"
       },
       {
         name: "Krutika Dwivedi",
@@ -32,22 +32,22 @@ const teamData = [
         linkedin: "https://www.linkedin.com/in/erikaocallaghan/"
       },
       {
-        name: "To be Announced",
+        name: "Ana Silva",
         role: "Co-Chief Operations Officer",
-        description: "TBA",
+        description: "UCD Economics & Finance '29",
         division: "Executive",
-        initials: "TBA",
-        photo: `${import.meta.env.BASE_URL}team/tba.png`,
-        linkedin: "https://www.linkedin.com/in/lockedin"
+        initials: "AS",
+        photo: `${import.meta.env.BASE_URL}team/ana-silva.png`,
+        linkedin: "https://www.linkedin.com/in/ana-silva-4324022b9"
       },
       {
-        name: "To be Announced",
+        name: "Tobi Jakande",
         role: "Chief Financial Officer",
-        description: "TBA",
+        description: "",
         division: "Executive",
-        initials: "TBA",
-        photo: `${import.meta.env.BASE_URL}team/tba.png`,
-        linkedin: "https://www.linkedin.com/in/lockedin"
+        initials: "TJ",
+        photo: `${import.meta.env.BASE_URL}team/tobi-jakande.png`,
+        linkedin: "https://www.linkedin.com/in/tobi-jakande/"
       },
       {
         name: "George Cussen",
@@ -93,15 +93,6 @@ const teamData = [
         initials: "MA",
         photo: `${import.meta.env.BASE_URL}team/mony-aramalla.png`,
         linkedin: "https://www.linkedin.com/in/mony-aramalla/"
-      },
-      {
-        name: "Ana Silva",
-        role: "Investment Officer & Co-Director of Marketing",
-        description: "UCD Economics & Finance '29",
-        division: "Committee",
-        initials: "AS",
-        photo: `${import.meta.env.BASE_URL}team/ana-silva.png`,
-        linkedin: "https://www.linkedin.com/in/ana-silva-4324022b9"
       },
       {
         name: "Vacant",
