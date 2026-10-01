@@ -32,18 +32,18 @@ const teamData = [
         linkedin: "https://www.linkedin.com/in/erikaocallaghan/"
       },
       {
-        name: "Ana Silva",
+        name: "Luke Kiely",
         role: "Co-Chief Operations Officer",
         description: "UCD Economics & Finance '29",
         division: "Executive",
-        initials: "AS",
-        photo: `${import.meta.env.BASE_URL}team/ana-silva.png`,
-        linkedin: "https://www.linkedin.com/in/ana-silva-4324022b9"
+        initials: "LK",
+        photo: `${import.meta.env.BASE_URL}team/luke-kiely.png`,
+        linkedin: "https://www.linkedin.com/in/luke-kiely-ire/"
       },
       {
         name: "Tobi Jakande",
         role: "Chief Financial Officer",
-        description: "",
+        description: "Maynooth Finance '27",
         division: "Executive",
         initials: "TJ",
         photo: `${import.meta.env.BASE_URL}team/tobi-jakande.png`,
@@ -72,7 +72,7 @@ const teamData = [
         role: "Director of Alternative Investments",
         description: "UCD Economics & Geography '27",
         division: "Alternative Investments",
-        initials: "BSOB",
+        initials: "BSO'B",
         photo: `${import.meta.env.BASE_URL}team/ben-sweeney-obrien.png`,
         linkedin: "https://www.linkedin.com/in/bensweeneyobrien/"
       },
@@ -86,16 +86,25 @@ const teamData = [
         linkedin: "https://www.linkedin.com/in/rory-brennan-28b551230/"
       },
       {
-        name: "Mony Aramalla",
+        name: "TBC",
         role: "Director of Technology",
-        description: "UCD MSc Mechanical Engineering (integrated) '28",
+        description: "",
         division: "Technology",
-        initials: "MA",
-        photo: `${import.meta.env.BASE_URL}team/mony-aramalla.png`,
-        linkedin: "https://www.linkedin.com/in/mony-aramalla/"
+        initials: "TBC",
+        photo: `${import.meta.env.BASE_URL}team/tbc.png`,
+        linkedin: ""
       },
       {
-        name: "Vacant",
+        name: "Ana Silva",
+        role: "Co-Director of Marketing",
+        description: "UCD Economics & Finance '29",
+        division: "Executive",
+        initials: "AS",
+        photo: `${import.meta.env.BASE_URL}team/ana-silva.png`,
+        linkedin: "https://www.linkedin.com/in/ana-silva-4324022b9"
+      },
+      {
+        name: "TBC",
         role: "Co-Director of Marketing",
         description: "",
         division: "Marketing",
