@@ -39,7 +39,7 @@ const Index = () => {
         <div id="sectors">
           <Sectors />
         </div>
-        {/* Performance content moved to /performance page */}
+        {/* Portfolio performance page replaced by /resources */}
         <EducationSection />
         <Partners />
         <JoinSection />

@@ -14,7 +14,7 @@ export const Navigation = () => {
     { label: "People", to: "/people" },
     { label: "Divisions", to: "/divisions" },
     { label: "Research", to: "/research" },
-    { label: "Performance", to: "/performance" },
+    { label: "Resources", to: "/resources" },
     { label: "Events", to: "/events" },
   ];
 

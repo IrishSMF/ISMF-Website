@@ -86,30 +86,30 @@ const teamData = [
         linkedin: "https://www.linkedin.com/in/rory-brennan-28b551230/"
       },
       {
-        name: "TBC",
+        name: "Mony Aramalla",
         role: "Director of Technology",
-        description: "",
+        description: "UCD MSc Mechanical Engineering (integrated) '28",
         division: "Technology",
-        initials: "TBC",
-        photo: `${import.meta.env.BASE_URL}team/tbc.png`,
-        linkedin: ""
+        initials: "MA",
+        photo: `${import.meta.env.BASE_URL}team/mony-aramalla.png`,
+        linkedin: "https://www.linkedin.com/in/mony-aramalla/"
       },
       {
         name: "Ana Silva",
-        role: "Co-Director of Marketing",
+        role: "Co-Head of Marketing",
         description: "UCD Economics & Finance '29",
-        division: "Executive",
+        division: "Marketing",
         initials: "AS",
         photo: `${import.meta.env.BASE_URL}team/ana-silva.png`,
         linkedin: "https://www.linkedin.com/in/ana-silva-4324022b9"
       },
       {
-        name: "Charles Graham",
-        role: "Co-Director of Marketing",
+        name: "Charlie Graham",
+        role: "Co-Head of Marketing",
         description: "UCD Economics & Finance '29",
         division: "Marketing",
         initials: "CG",
-        photo: `${import.meta.env.BASE_URL}team/charles-graham.png`,
+        photo: `${import.meta.env.BASE_URL}team/charlie-graham.png`,
         linkedin: "https://www.linkedin.com/in/charlesgraham0/"
       },
       {
