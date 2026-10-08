@@ -7,7 +7,7 @@ const teamData = [
      {
         name: "Michael E. Gasior",
         role: "Chief Executive Officer",
-        description: "",
+        description: "QUB PhD '28",
         division: "Executive",
         initials: "MEG",
         photo: `${import.meta.env.BASE_URL}team/michael-e-gasior.png`,
@@ -104,13 +104,13 @@ const teamData = [
         linkedin: "https://www.linkedin.com/in/ana-silva-4324022b9"
       },
       {
-        name: "TBC",
+        name: "Charles Graham",
         role: "Co-Director of Marketing",
-        description: "",
+        description: "UCD Economics & Finance '29",
         division: "Marketing",
-        initials: "U",
-        photo: `${import.meta.env.BASE_URL}team/vacant.png`,
-        linkedin: ""
+        initials: "CG",
+        photo: `${import.meta.env.BASE_URL}team/charles-graham.png`,
+        linkedin: "https://www.linkedin.com/in/charlesgraham0/"
       },
       {
         name: "Patrick Ryan",
@@ -120,6 +120,15 @@ const teamData = [
         initials: "PR",
         photo: `${import.meta.env.BASE_URL}team/patrick-ryan.png`,
         linkedin: "https://www.linkedin.com/in/patrick-ryan-ucd/"
+      },
+      {
+        name: "TBC",
+        role: "Director of Careers",
+        description: "",
+        division: "Careers",
+        initials: "TBC",
+        photo: `${import.meta.env.BASE_URL}team/tbc.png`,
+        linkedin: ""
       },
 ];
 
