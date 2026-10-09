@@ -1,43 +1,43 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
-import { ChevronDown, TrendingUp, Briefcase, Code, Megaphone, BarChart3, Globe } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { TrendingUp, Briefcase, Code, Megaphone, BarChart3, Globe } from "lucide-react";
+import { motion } from "framer-motion";
 
 const divisions = [
   {
-    name: "EQUITIES",
+    name: "Equities",
     description:
-      "Conducts fundamental analysis, stock selection, and equity portfolio management.",
+      "Fundamental analysis, stock selection, and equity portfolio management.",
     icon: BarChart3,
   },
   {
-    name: "ALTERNATIVE INVESTMENTS",
+    name: "Alternative Investments",
     description:
-      "Focuses on analysing Private Markets (VC & Private Equity), Commodities, Real Estate, and Digital Assets.",
+      "Private markets (VC and private equity), commodities, real estate, and digital assets.",
     icon: Briefcase,
   },
   {
-    name: "QUANT",
+    name: "Quant",
     description:
-      "Focused on quantitative modeling, systematic strategies, and data-driven investment decisions.",
+      "Quantitative modelling, systematic strategies, and data-driven investment decisions.",
     icon: TrendingUp,
   },
   {
-    name: "MACROECONOMIC RESEARCH",
+    name: "Macroeconomic Research",
     description:
-      "Analyses macroeconomic trends, monetary policy, and market-wide investment opportunities.",
+      "Macroeconomic trends, monetary policy, and market-wide investment opportunities.",
     icon: Globe,
   },
   {
-    name: "TECHNOLOGY",
+    name: "Technology",
     description:
-      "Supports the fund's technical infrastructure, automation, and software tools to enhance performance.",
+      "Technical infrastructure, automation, and software tools that support the fund.",
     icon: Code,
   },
   {
-    name: "MARKETING / EVENTS",
+    name: "Marketing / Events",
     description:
-      "Manages branding, outreach, event organization, and internal/external communications.",
+      "Branding, outreach, events, and internal and external communications.",
     icon: Megaphone,
   },
 ];
@@ -48,22 +48,9 @@ export const metadata = {
 };
 
 export default function Divisions() {
-  const [activeDivision, setActiveDivision] = useState(null);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const handleDivisionClick = (index) => {
-    setActiveDivision(activeDivision === index ? null : index);
-  };
-
-  const handleKeyDown = (e, index) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      handleDivisionClick(index);
-    }
-  };
 
   return (
     <>
@@ -78,88 +65,47 @@ export default function Divisions() {
         <meta name="twitter:description" content="Explore the diverse divisions that drive our investment strategy and operations." />
       </Helmet>
       <section className="bg-navy-dark min-h-screen w-full">
-      <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-        <header className="mb-12 text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-4 leading-tight">
-            Our Divisions
-          </h1>
-          <p className="mt-3 max-w-2xl mx-auto text-white/70 text-lg">
-            Explore the diverse divisions that drive our investment strategy and
-            operations.
-          </p>
-        </header>
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+          <header className="mb-12 text-center">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/50">
+              How we work
+            </p>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-4 leading-tight">
+              Our Divisions
+            </h1>
+            <p className="mt-3 max-w-2xl mx-auto text-white/70 text-lg">
+              Six teams covering research, investing, technology, and how we show
+              up — each with a clear mandate.
+            </p>
+          </header>
 
-        <div className="space-y-6">
-          {divisions.map((division, index) => {
-            const Icon = division.icon;
-            const isActive = activeDivision === index;
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-10">
+            {divisions.map((division, index) => {
+              const Icon = division.icon;
 
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                className={`group transition-all duration-300 cursor-pointer rounded-xl border-l-4 p-6 shadow-sm hover:shadow-md
-                  ${
-                    isActive
-                      ? "bg-navy-mid border-white scale-[1.02]"
-                      : "bg-navy-light/50 border-transparent hover:border-white/30"
-                  }`}
-                onClick={() => handleDivisionClick(index)}
-                onKeyDown={(e) => handleKeyDown(e, index)}
-                role="button"
-                tabIndex={0}
-                aria-expanded={isActive}
-              >
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-4">
-                    <div
-                      className={`w-12 h-12 rounded-lg flex items-center justify-center transition-colors duration-300 ${
-                        isActive
-                          ? "bg-white text-navy"
-                          : "bg-white/10 text-white"
-                      }`}
-                    >
-                      <Icon className="w-6 h-6" />
-                    </div>
-                    <h2 className="text-2xl font-semibold text-white">
-                      {division.name}
-                    </h2>
+              return (
+                <motion.article
+                  key={division.name}
+                  initial={{ opacity: 0, y: 22 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.06 }}
+                  className="group rounded-2xl border border-navy-border bg-navy-mid p-6 sm:p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-white/35 hover:shadow-xl"
+                >
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-white/10 text-white transition-colors duration-300 group-hover:bg-white group-hover:text-navy">
+                    <Icon className="h-6 w-6" />
                   </div>
-                  <motion.div
-                    animate={{ rotate: isActive ? 180 : 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <ChevronDown
-                      className={`w-6 h-6 text-white transition-colors ${
-                        isActive ? "opacity-100" : "opacity-70"
-                      }`}
-                    />
-                  </motion.div>
-                </div>
-
-                <AnimatePresence>
-                  {isActive && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
-                      className="overflow-hidden"
-                    >
-                      <p className="mt-4 text-white/70 leading-relaxed">
-                        {division.description}
-                      </p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
-            );
-          })}
+                  <h2 className="mt-5 text-2xl font-semibold text-white">
+                    {division.name}
+                  </h2>
+                  <p className="mt-2 text-white/70 leading-relaxed">
+                    {division.description}
+                  </p>
+                </motion.article>
+              );
+            })}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </>
   );
 }
