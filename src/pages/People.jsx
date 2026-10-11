@@ -89,7 +89,7 @@ const teamData = [
   {
     name: "Mony Aramalla",
     role: "Director of Technology",
-    description: "ME Mechanical Engineering with Business at UCD",
+    description: "UCD ME Mechanical Engineering with Business '28 ",
     division: "Technology",
     initials: "MA",
     photo: `${import.meta.env.BASE_URL}team/mony-aramalla.png`,
