@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Helmet } from "react-helmet";
 import TeamGrid from "@/components/TeamGrid";
 
@@ -134,16 +134,19 @@ const teamData = [
 ];
 
 
+const CURRENT_YEAR = "26/27";
+
+
 const previousCommittees = [
   {
     year: "25/26",
     members: [
-      { role: "Co-CEOs", names: ["Raj Aryan Upadhyaya", "Caius Kauppi"] },
+      { role: "Co-CEO", names: ["Raj Aryan Upadhyaya", "Caius Kauppi"] },
       { role: "Chairperson", names: ["Krutika Dwivedi"] },
-      { role: "Co-Directors of Equities", names: ["Klaudia Ciepiela", "Merlin Girard Razel"] },
+      { role: "Co-Director of Equities", names: ["Klaudia Ciepiela", "Merlin Girard Razel"] },
       { role: "Director of Macroeconomic Research", names: ["Tejal Ramchandani"] },
-      { role: "Directors of Quantitative Finance", names: ["Jonah Jjemba", "Matus Sorocin"] },
-      { role: "Directors of Alternative Investments", names: ["Ella Molloy", "Pranav Sharma"] },
+      { role: "Director of Quantitative Finance", names: ["Jonah Jjemba", "Matus Sorocin"] },
+      { role: "Director of Alternative Investments", names: ["Ella Molloy", "Pranav Sharma"] },
       { role: "CFO", names: ["Theo McGirr"] },
       { role: "CTO", names: ["Mony Aramalla"] },
       { role: "CMO", names: ["Carole Misdari"] },
@@ -155,7 +158,7 @@ const previousCommittees = [
     members: [
       { role: "Founder & CEO", names: ["Raj Aryan Upadhyaya"] },
       { role: "COO", names: ["Krutika Dwivedi"] },
-      { role: "Directors of Equities", names: ["Michael Mensah", "Conor Johnston"] },
+      { role: "Director of Equities", names: ["Michael Mensah", "Conor Johnston"] },
       { role: "Director of Quantitative Finance", names: ["Luke Barry"] },
       { role: "Director of Macroeconomic Research", names: ["Robert Rafanelli"] },
       { role: "CFO", names: ["Juliette Carty"] },
@@ -168,6 +171,27 @@ const previousCommittees = [
 ];
 
 
+const getInitials = (name) =>
+  name
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((part) => part[0].toUpperCase())
+    .slice(0, 3)
+    .join("");
+
+
+// Flatten { role, names[] } rows into TeamGrid-shaped members (no photo / linkedin => initials only)
+const toGridMembers = (committee) =>
+  committee.members.flatMap(({ role, names }) =>
+    names.map((name) => ({
+      name,
+      role,
+      description: "",
+      initials: getInitials(name),
+    }))
+  );
+
+
 export const metadata = {
   title: "People — Irish Student Managed Fund",
   description: "Meet the Irish Student Managed Fund leadership committee spanning Equities, Macro, Quant, and Alternatives."
@@ -175,12 +199,45 @@ export const metadata = {
 
 
 export default function People() {
-  const [activeYear, setActiveYear] = useState(previousCommittees[0].year);
-  const activeCommittee = previousCommittees.find((c) => c.year === activeYear);
+  const [activeYear, setActiveYear] = useState(CURRENT_YEAR);
+  const [open, setOpen] = useState(false);
+  const menuRef = useRef(null);
+
+
+  const years = useMemo(
+    () => [CURRENT_YEAR, ...previousCommittees.map((c) => c.year)],
+    []
+  );
+
+
+  const members = useMemo(() => {
+    if (activeYear === CURRENT_YEAR) return teamData;
+    const committee = previousCommittees.find((c) => c.year === activeYear);
+    return committee ? toGridMembers(committee) : [];
+  }, [activeYear]);
+
+
+  const isCurrent = activeYear === CURRENT_YEAR;
 
 
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+
+  useEffect(() => {
+    const onClickOutside = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) setOpen(false);
+    };
+    const onEsc = (e) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("mousedown", onClickOutside);
+    document.addEventListener("keydown", onEsc);
+    return () => {
+      document.removeEventListener("mousedown", onClickOutside);
+      document.removeEventListener("keydown", onEsc);
+    };
   }, []);
 
 
@@ -206,69 +263,77 @@ export default function People() {
               The Irish Student Managed Fund leadership committee spans Equities,
               Macro, Quant, and Alternatives.
             </p>
+
+
+            <div ref={menuRef} className="relative mt-8 inline-block text-left">
+              <button
+                type="button"
+                aria-haspopup="listbox"
+                aria-expanded={open}
+                onClick={() => setOpen((o) => !o)}
+                className="inline-flex items-center gap-3 rounded-full border border-navy-border bg-navy-mid px-6 py-3 text-base font-semibold text-white shadow-[4px_4px_0_0_#0A0A0A] transition hover:ring-2 hover:ring-white/30"
+              >
+                {activeYear} Committee{isCurrent ? " (Current)" : ""}
+                <svg
+                  className={`h-4 w-4 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </button>
+
+
+              {open && (
+                <ul
+                  role="listbox"
+                  aria-label="Select committee year"
+                  className="absolute left-1/2 z-20 mt-3 w-64 -translate-x-1/2 overflow-hidden rounded-xl border border-navy-border bg-navy-mid shadow-[4px_4px_0_0_#0A0A0A]"
+                >
+                  {years.map((year) => {
+                    const selected = year === activeYear;
+                    return (
+                      <li key={year} role="option" aria-selected={selected}>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setActiveYear(year);
+                            setOpen(false);
+                          }}
+                          className={`flex w-full items-center justify-between px-5 py-3 text-left text-sm font-semibold transition ${
+                            selected
+                              ? "bg-white text-navy"
+                              : "text-white hover:bg-white/10"
+                          }`}
+                        >
+                          <span>
+                            {year}
+                            {year === CURRENT_YEAR ? " (Current)" : ""}
+                          </span>
+                          {selected && <span aria-hidden="true">✓</span>}
+                        </button>
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
+            </div>
+
+
+            {!isCurrent && (
+              <p className="mt-4 text-sm text-[#4A4A4A]">
+                Showing the {activeYear} committee.
+              </p>
+            )}
           </header>
 
 
-          <TeamGrid members={teamData} />
-
-
-          <section id="previous-committees" className="mt-24">
-            <header className="mb-8 text-center">
-              <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-[#0A0A0A] mb-3">
-                Previous Committees
-              </h2>
-              <p className="max-w-2xl mx-auto text-[#4A4A4A] text-lg">
-                The people who built the fund before us.
-              </p>
-            </header>
-
-
-            <div
-              role="tablist"
-              aria-label="Select committee year"
-              className="mb-8 flex flex-wrap justify-center gap-3"
-            >
-              {previousCommittees.map(({ year }) => {
-                const selected = year === activeYear;
-                return (
-                  <button
-                    key={year}
-                    role="tab"
-                    aria-selected={selected}
-                    onClick={() => setActiveYear(year)}
-                    className={`rounded-full border-2 border-navy-border px-5 py-2 text-sm font-semibold transition ${
-                      selected
-                        ? "bg-white text-navy ring-2 ring-navy-mid"
-                        : "bg-navy-mid text-white hover:ring-2 hover:ring-white/30"
-                    }`}
-                  >
-                    {year}
-                  </button>
-                );
-              })}
-            </div>
-
-
-            <div role="tabpanel" className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {activeCommittee.members.map(({ role, names }) => (
-                <div
-                  key={role}
-                  className="rounded-xl border border-navy-border bg-navy-mid p-5 shadow-[4px_4px_0_0_#0A0A0A]"
-                >
-                  <p className="text-xs font-semibold uppercase tracking-wide text-white/70">
-                    {role}
-                  </p>
-                  <ul className="mt-2 space-y-1">
-                    {names.map((name) => (
-                      <li key={name} className="text-lg font-bold text-white">
-                        {name}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </section>
+          <TeamGrid key={activeYear} members={members} />
         </div>
       </section>
     </>
